@@ -9,6 +9,9 @@ export default {
     extend: {},
     fontFamily: {
       'Montserrat': ['Montserrat', 'sans-serif']
+    },
+    backgroundColor: {
+      'Default': '#1d1d20'
     }
   },
   plugins: [],

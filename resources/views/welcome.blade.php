@@ -19,9 +19,10 @@
         </style>
 
         @vite(['resources/css/app.css'])
+        @vite(['resources/js/app.js'])
     </head>
     <body class="antialiased">
-        <div class="w-full bg-[#1d1d20]">
+        <div class="w-full bg-Default min-h-screen h-[5000px]">
             {{-- Banner --}}
             <div class="w-full flex justify-center">
                 <div class="w-[969px] h-[333px] mt-40 mb-16 border-r-4 border-l-4 border-black flex justify-center align-middle flex-col gap-11">
@@ -31,18 +32,18 @@
             </div>
 
             {{-- Menu --}}
-            <div class="w-full flex justify-center font-Montserrat text-4xl text-gray-300 py-6">
+            <div id="menu" class="w-full flex justify-center font-Montserrat text-4xl text-gray-300 py-16 sticky top-0">
                 {{-- Item --}}
-                <div class="border-r-2 border-gray-300 px-8 py-2.5">
-                    <p>PROYECTOS</p>
+                <div id="menu-item-1" class="border-r-2 border-gray-300 px-8 py-2.5 cursor-pointer menu-item bg-Default z-20 transition-all ease-out duration-500">
+                    <p class="highlightable transition-all ease-in-out duration-500">PROYECTOS</p>
                 </div>
                 {{-- Item --}}
-                <div class="px-8 py-2.5">
-                    <p>EXPERIÉNCIA</p>
+                <div id="menu-item-2" class="border-r-2 border-gray-300 px-8 py-2.5 cursor-pointer menu-item bg-Default z-10 transition-all ease-out duration-500">
+                    <p class="highlightable transition-all ease-in-out duration-500">EXPERIÉNCIA</p>
                 </div>
                 {{-- Item --}}
-                <div class="border-l-2 border-gray-300 px-8 py-2.5">
-                    <p>CONTACTO</p>
+                <div id="menu-item-3" class="px-8 py-2.5 cursor-pointer menu-item bg-Default z-0 transition-all ease-out duration-500">
+                    <p class="highlightable transition-all ease-in-out duration-500">CONTACTO</p>
                 </div>
             </div>
         </div>
