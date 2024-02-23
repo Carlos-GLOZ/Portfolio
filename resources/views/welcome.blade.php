@@ -27,7 +27,7 @@
             <div class="w-full flex justify-center">
                 <div class="w-[969px] h-[333px] mt-40 mb-16 border-r-4 border-l-4 border-black flex justify-center align-middle flex-col gap-11">
                     <p class="text-8xl font-Montserrat text-gray-300 text-center">Carlos Giraldo</p>
-                    <p class="text-2xl font-Montserrat text-gray-600 text-center">Desarrollador web front-end y back-end</p>
+                    <p class="text-2xl font-Montserrat text-gray-600 text-center">{{ ucfirst(__('fullstack web developer')) }}</p>
                 </div>
             </div>
 
@@ -35,15 +35,15 @@
             <div id="menu" class="w-full flex justify-center font-Montserrat text-4xl text-gray-300 py-16 sticky top-0">
                 {{-- Item --}}
                 <div id="menu-item-1" class="border-r-2 border-gray-300 px-8 py-2.5 cursor-pointer menu-item bg-Default z-20 transition-all ease-out duration-500">
-                    <p class="highlightable transition-all ease-in-out duration-500">PROYECTOS</p>
+                    <a href="#projects" class="highlightable transition-all ease-in-out duration-500">{{ mb_strtoupper(__('projects')) }}</a>
                 </div>
                 {{-- Item --}}
                 <div id="menu-item-2" class="border-r-2 border-gray-300 px-8 py-2.5 cursor-pointer menu-item bg-Default z-10 transition-all ease-out duration-500">
-                    <p class="highlightable transition-all ease-in-out duration-500">EXPERIÉNCIA</p>
+                    <a href="#experience" class="highlightable transition-all ease-in-out duration-500">{{ mb_strtoupper(__('experience')) }}</a>
                 </div>
                 {{-- Item --}}
                 <div id="menu-item-3" class="px-8 py-2.5 cursor-pointer menu-item bg-Default z-0 transition-all ease-out duration-500">
-                    <p class="highlightable transition-all ease-in-out duration-500">CONTACTO</p>
+                    <a href="#contact" class="highlightable transition-all ease-in-out duration-500">{{ mb_strtoupper(__('contact')) }}</a>
                 </div>
             </div>
         </div>
