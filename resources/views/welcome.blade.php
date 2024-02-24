@@ -46,6 +46,23 @@
                     <a href="#contact" class="highlightable transition-all ease-in-out duration-500">{{ mb_strtoupper(__('contact')) }}</a>
                 </div>
             </div>
+
+            {{-- Projects --}}
+            <section id="projects">
+
+            </section>
+
+            {{-- Experience --}}
+            <section id="experience">
+
+            </section>
+
+            {{-- Contact --}}
+            <section id="contact" class="w-full flex justify-center">
+                <div class="flex">
+                    
+                </div>
+            </section>
         </div>
     </body>
 </html>
