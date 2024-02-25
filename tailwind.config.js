@@ -11,7 +11,9 @@ export default {
       'Montserrat': ['Montserrat', 'sans-serif']
     },
     backgroundColor: {
-      'Default': '#1d1d20'
+      'Default': '#1d1d20',
+      'Card': '#3d3e42',
+      'CardHighlight': '#f0bf6c',
     }
   },
   plugins: [],
