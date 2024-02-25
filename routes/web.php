@@ -15,8 +15,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/{locale?}', function (string $locale = null) {
-    if (in_array(strtolower($locale), ['en', 'es'])) {
-        App::setLocale($locale);
+    $supported_locales = [
+        'en', 
+        'es',
+    ];
+
+    if (!in_array(strtolower($locale), $supported_locales)) {
+        $locale = 'es';
     }
-    return view('welcome');
+    
+    App::setLocale($locale);
+
+    return view('welcome', ['locale' => $locale, 'supported_locales' => $supported_locales]);
 });

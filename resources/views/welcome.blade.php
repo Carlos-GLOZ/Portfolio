@@ -20,9 +20,30 @@
 
         @vite(['resources/css/app.css'])
         @vite(['resources/js/app.js'])
+        @vite(['resources/js/language_selection.js'])
     </head>
     <body class="antialiased">
         <div class="w-full bg-Default min-h-screen h-[5000px]">
+            {{-- Language picker --}}
+            <div class="absolute right-40 top-10">
+                <p id="language-selector-current" class="bg-[transparent] text-gray-300 w-16 h-8s border-b-2 border-transparent hover:border-gray-300 flex flex-row justify-around cursor-pointer">
+                    {{ strtoupper($locale) }}
+                    <img src="{{ asset('assets/images/icons/'.$locale.'_flag.png') }}" alt="{{ $locale }}" class="w-5 object-contain"> 
+                </p>
+
+                <div id="language-selector-list" class="hidden mt-2" data-hidden="true">
+                    @foreach ($supported_locales as $sup_locale)
+                        @if ($sup_locale != $locale)
+                            <p class="language-selector-option bg-[transparent] text-gray-300 w-16 h-8s border-b-2 border-transparent hover:border-gray-300 flex flex-row justify-around cursor-pointer" data-lang="{{ $sup_locale }}">
+                                {{ strtoupper($sup_locale) }}
+                                <img src="{{ asset('assets/images/icons/'.$sup_locale.'_flag.png') }}" alt="{{ $sup_locale }}" class="w-5 object-contain"> 
+                            </p>
+                        @endif
+                    @endforeach
+                </div>
+            </div>
+            
+
             {{-- Banner --}}
             <div class="w-full flex justify-center">
                 <div class="w-[969px] h-[333px] mt-40 mb-16 border-r-4 border-l-4 border-black flex justify-center align-middle flex-col gap-11">

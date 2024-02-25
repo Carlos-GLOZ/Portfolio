@@ -19,8 +19,6 @@ const menuItemsInitialPos = {
     'menu-item-3': menuItem3.getBoundingClientRect().left,
 }
 
-console.log(menuItemsInitialPos);
-
 const menuItemsVerticalTransforms = {
     'menu-item-1': 0,
     'menu-item-2': 100,
@@ -31,29 +29,7 @@ const menuItemsVerticalTransforms = {
 function updateMenuPos() {
     // Move menu elements
     for (let i = 0; i < menuItems.length; i++) {
-        const item = menuItems[i];
-
-        // const itemLeft = item.getBoundingClientRect().left;
-
-        // if (itemLeft <= 200 && menuItemsLeftmostPos[item.id] == null) {
-        //     menuItemsLeftmostPos[item.id] = scrollY;
-        // }
-
-        // // Check if menu is already hidden
-        // if (item.id == 'menu-item-3' && menuItemsLeftmostPos[item.id] != null && scrollY >= menuItemsLeftmostPos[item.id]) { // If item 3 has reached the left of the page
-        //     return true;
-        // }
-        
-        // if (scrollY < menuItemsLeftmostPos[item.id] || menuItemsLeftmostPos[item.id] == null) {
-        //     item.style.transform = 'translate(-' + scrollY * 2 + 'px)';
-        // } else {
-        //     if (item.id == 'menu-item-1') {
-        //         item.style.transform = 'translate(-' + menuItemsLeftmostPos[item.id] * 2 + 'px)';
-        //     } else {
-        //         item.style.transform = 'translate(-' + scrollY * 2 + 'px)';
-        //     }
-        // }
-        
+        const item = menuItems[i];       
 
         if (scrollY < 500) {
             const leftTransform = menuItemsInitialPos[item.id] * (scrollY / 500);
