@@ -4,3 +4,17 @@
 .card:hover p {
   color: #374151;
 }
+.contact-link:hover p {
+  transition: all;
+  transition-duration: 500ms;
+  opacity: 0;
+}
+.contact-link:hover .pusher {
+  width: 74%;
+}
+.contact-link:hover .link-title {
+  display: none;
+}
+.contact-link:hover .image-filter {
+  opacity: 0;
+}
