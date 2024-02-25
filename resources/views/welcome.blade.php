@@ -124,8 +124,8 @@
                             </div>
                             
                             <div class="card w-72 bg-Card p-16 flex flex-col justify-around items-center gap-8 rounded-3xl hover:bg-CardHighlight cursor-pointer transition-all duration-300 opacity-0">
-                                <img src="{{ asset('assets/images/icons/sql_logo.png') }}" alt="" class="w-20">
-                                <p class="text-center text-gray-300 text-2xl font-semibold">SQL</p>
+                                <img src="{{ asset('assets/images/icons/mysql_logo.png') }}" alt="" class="h-20">
+                                <p class="text-center text-gray-300 text-2xl font-semibold">MySQL</p>
                             </div>
                         </div>
                     </div>
