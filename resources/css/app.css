@@ -18,3 +18,20 @@
 .contact-link:hover .image-filter {
   opacity: 0;
 }
+.contact-link:hover .contact-link-text-container-padding-secondary {
+  width: 5%;
+}
+.contact-link:hover .contact-link-text-container-padding-primary {
+  flex: 1;
+}
+.contact-link-text-container-padding-secondary {
+  max-width: fill-available;
+  /* WebKit-based browsers will ignore this. */
+  max-width: -moz-available;
+  /* Mozilla-based browsers will ignore this. */
+  max-width: -webkit-fill-available;
+  min-width: 5%;
+}
+.contact-link-text-container-padding-primary {
+  min-width: 10%;
+}

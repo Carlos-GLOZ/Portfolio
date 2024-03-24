@@ -26,7 +26,7 @@
         @vite(['resources/js/language_selection.js'])
     </head>
     <body class="antialiased">
-        <div class="w-full bg-Default min-h-screen h-[5000px]">
+        <div class="w-full bg-Default min-h-screen">
             {{-- Language picker --}}
             <div class="absolute right-40 top-10">
                 <p id="language-selector-current" class="bg-[transparent] text-gray-300 w-16 h-8s border-b-2 border-transparent hover:border-gray-300 flex flex-row justify-around cursor-pointer">
@@ -132,22 +132,32 @@
                 </section>
 
                 {{-- Contact --}}
-                <section id="contact" class="w-full flex justify-center pl-96 pr-36 mt-64" data-isShown="false">
-                    <div class="w-full h-[38rem] flex flex-col gap-4">
+                <section id="contact" class="w-full flex justify-center pl-96 pr-36 mt-64 mb-60" data-isShown="false">
+                    <div class="w-full h-[38rem] flex flex-col gap-4 contact-links-container">
                         <a href="https://github.com/Carlos-GLOZ" target="blank" class="contact-link flex flex-row items-center h-1/3 w-full border-l-8 border-gray-500 bg-Card cursor-pointer gap-10 z-10 relative transition-all duration-700 ease-out hover:border-l-[24px] hover:border-blue-200 hover:h-80">
                             <div class="pusher w-10 transition-all duration-700 ease-out"></div>
                             <img src="{{ asset('assets/images/icons/github_logo.png') }}" alt="" class="h-2/3">
                             <p class="link-title text-5xl text-gray-300">GitHub</p>
                             <div class="image-filter absolute w-full h-full backdrop-grayscale backdrop-blur-lg -z-10 transition-all duration-1000 ease-out"></div>
-                            <div class="bg-cover w-full absolute -z-20 pl-[10%] text-7xl text-gray-300">Carlos-GLOZ</div>
+
+                            <div class="contact-link-text-container w-full h-full flex justify-end items-center absolute transition-all duration-1000 ease-out">
+                                <div class="contact-link-text-container-padding-secondary transition-all duration-1000 ease-out"></div>
+                                <div class="bg-cover -z-20 text-7xl text-gray-300 contact-link-text text-nowrap">Carlos-GLOZ</div>
+                                <div class="contact-link-text-container-padding-primary w-[10%] transition-all duration-1000 ease-out"></div>
+                            </div>
                         </a>
 
-                        <a href="https://www.linkedin.com/in/carlos-giraldo-lozano-319a36225/" target="blank" class="contact-link flex flex-row items-center h-1/3 w-full border-l-8 border-gray-500 bg-Card cursor-pointer gap-10 z-10 relative transition-all duration-700 ease-out hover:border-l-[24px] hover:border-blue-200 hover:h-80">
+                        <a href="https://www.linkedin.com/in/carlos-giraldo-lozano-319a36225/" target="blank" class="contact-link flex flex-row-reverse items-center h-1/3 w-full border-r-8 border-gray-500 bg-Card cursor-pointer gap-10 z-10 relative transition-all duration-700 ease-out hover:border-r-[24px] hover:border-blue-200 hover:h-80">
                             <div class="pusher w-10 transition-all duration-700 ease-out"></div>
                             <img src="{{ asset('assets/images/icons/linkedin_logo.png') }}" alt="" class="h-2/3">
                             <p class="link-title text-5xl text-gray-300">LinkedIn</p>
                             <div class="image-filter absolute w-full h-full backdrop-grayscale backdrop-blur-lg -z-10 transition-all duration-1000 ease-out"></div>
-                            <div class="bg-cover w-full absolute -z-20 pl-[10%] text-7xl text-gray-300">Carlos Giraldo Lozano</div>
+                            
+                            <div class="contact-link-text-container w-full h-full flex justify-start items-center absolute transition-all duration-1000 ease-out">
+                                <div class="contact-link-text-container-padding-primary w-[10%] transition-all duration-1000 ease-out"></div>
+                                <div class="bg-cover -z-20 text-7xl text-gray-300 contact-link-text text-nowrap">Carlos Giraldo Lozano</div>
+                                <div class="contact-link-text-container-padding-secondary transition-all duration-1000 ease-out"></div>
+                            </div>
                         </a>
 
                         <a href="mailto:cgiraldolozano@gmail.com" target="blank" class="contact-link flex flex-row items-center h-1/3 w-full border-l-8 border-gray-500 bg-Card cursor-pointer gap-10 z-10 relative transition-all duration-700 ease-out hover:border-l-[24px] hover:border-blue-200 hover:h-80">
@@ -155,8 +165,29 @@
                             <img src="{{ asset('assets/images/icons/email_logo.png') }}" alt="" class="h-2/3">
                             <p class="link-title text-5xl text-gray-300">Email</p>
                             <div class="image-filter absolute w-full h-full backdrop-grayscale backdrop-blur-lg -z-10 transition-all duration-1000 ease-out"></div>
-                            <div class="bg-cover w-full absolute -z-20 pl-[10%] text-7xl text-gray-300">cgiraldolozano@gmail.com</div>
+                            
+                            <div class="contact-link-text-container w-full h-full flex justify-end items-center absolute transition-all duration-1000 ease-out">
+                                <div class="contact-link-text-container-padding-secondary transition-all duration-1000 ease-out"></div>
+                                <div class="bg-cover -z-20 text-7xl text-gray-300 contact-link-text text-nowrap">cgiraldolozano@gmail.com</div>
+                                <div class="contact-link-text-container-padding-primary w-[10%] transition-all duration-1000 ease-out"></div>
+                            </div>
                         </a>
+
+                        {{-- <a href="https://www.linkedin.com/in/carlos-giraldo-lozano-319a36225/" target="blank" class="contact-link flex flex-row-reverse items-center h-1/3 w-full border-r-8 border-gray-500 bg-Card cursor-pointer gap-10 z-10 relative transition-all duration-700 ease-out hover:border-r-[24px] hover:border-blue-200 hover:h-80">
+                            <div class="pusher w-10 transition-all duration-700 ease-out"></div>
+                            <img src="{{ asset('assets/images/icons/linkedin_logo.png') }}" alt="" class="h-2/3">
+                            <p class="link-title text-5xl text-gray-300">LinkedIn</p>
+                            <div class="image-filter absolute w-full h-full backdrop-grayscale backdrop-blur-lg -z-10 transition-all duration-1000 ease-out"></div>
+                            <div class="bg-cover w-full absolute -z-20 pl-[10%] text-7xl text-gray-300 contact-link-text">Carlos Giraldo Lozano</div>
+                        </a> --}}
+
+                        {{-- <a href="mailto:cgiraldolozano@gmail.com" target="blank" class="contact-link flex flex-row items-center h-1/3 w-full border-l-8 border-gray-500 bg-Card cursor-pointer gap-10 z-10 relative transition-all duration-700 ease-out hover:border-l-[24px] hover:border-blue-200 hover:h-80">
+                            <div class="pusher w-10 transition-all duration-700 ease-out"></div>
+                            <img src="{{ asset('assets/images/icons/email_logo.png') }}" alt="" class="h-2/3">
+                            <p class="link-title text-5xl text-gray-300">Email</p>
+                            <div class="image-filter absolute w-full h-full backdrop-grayscale backdrop-blur-lg -z-10 transition-all duration-1000 ease-out"></div>
+                            <div class="bg-cover w-full absolute -z-20 pl-[10%] text-7xl text-gray-300 contact-link-text">cgiraldolozano@gmail.com</div>
+                        </a> --}}
                     </div>
                 </section>
 
