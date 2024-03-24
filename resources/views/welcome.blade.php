@@ -140,6 +140,7 @@
                             <p class="link-title text-5xl text-gray-300">GitHub</p>
                             <div class="image-filter absolute w-full h-full backdrop-grayscale backdrop-blur-lg -z-10 transition-all duration-1000 ease-out"></div>
 
+                            {{-- Animation controlled by external CSS sheet (app.css) --}}
                             <div class="contact-link-text-container w-full h-full flex justify-end items-center absolute transition-all duration-1000 ease-out">
                                 <div class="contact-link-text-container-padding-secondary transition-all duration-1000 ease-out"></div>
                                 <div class="bg-cover -z-20 text-7xl text-gray-300 contact-link-text text-nowrap">Carlos-GLOZ</div>
@@ -153,6 +154,7 @@
                             <p class="link-title text-5xl text-gray-300">LinkedIn</p>
                             <div class="image-filter absolute w-full h-full backdrop-grayscale backdrop-blur-lg -z-10 transition-all duration-1000 ease-out"></div>
                             
+                            {{-- Animation controlled by external CSS sheet (app.css) --}}
                             <div class="contact-link-text-container w-full h-full flex justify-start items-center absolute transition-all duration-1000 ease-out">
                                 <div class="contact-link-text-container-padding-primary w-[10%] transition-all duration-1000 ease-out"></div>
                                 <div class="bg-cover -z-20 text-7xl text-gray-300 contact-link-text text-nowrap">Carlos Giraldo Lozano</div>
@@ -166,28 +168,13 @@
                             <p class="link-title text-5xl text-gray-300">Email</p>
                             <div class="image-filter absolute w-full h-full backdrop-grayscale backdrop-blur-lg -z-10 transition-all duration-1000 ease-out"></div>
                             
+                            {{-- Animation controlled by external CSS sheet (app.css) --}}
                             <div class="contact-link-text-container w-full h-full flex justify-end items-center absolute transition-all duration-1000 ease-out">
                                 <div class="contact-link-text-container-padding-secondary transition-all duration-1000 ease-out"></div>
                                 <div class="bg-cover -z-20 text-7xl text-gray-300 contact-link-text text-nowrap">cgiraldolozano@gmail.com</div>
                                 <div class="contact-link-text-container-padding-primary w-[10%] transition-all duration-1000 ease-out"></div>
                             </div>
                         </a>
-
-                        {{-- <a href="https://www.linkedin.com/in/carlos-giraldo-lozano-319a36225/" target="blank" class="contact-link flex flex-row-reverse items-center h-1/3 w-full border-r-8 border-gray-500 bg-Card cursor-pointer gap-10 z-10 relative transition-all duration-700 ease-out hover:border-r-[24px] hover:border-blue-200 hover:h-80">
-                            <div class="pusher w-10 transition-all duration-700 ease-out"></div>
-                            <img src="{{ asset('assets/images/icons/linkedin_logo.png') }}" alt="" class="h-2/3">
-                            <p class="link-title text-5xl text-gray-300">LinkedIn</p>
-                            <div class="image-filter absolute w-full h-full backdrop-grayscale backdrop-blur-lg -z-10 transition-all duration-1000 ease-out"></div>
-                            <div class="bg-cover w-full absolute -z-20 pl-[10%] text-7xl text-gray-300 contact-link-text">Carlos Giraldo Lozano</div>
-                        </a> --}}
-
-                        {{-- <a href="mailto:cgiraldolozano@gmail.com" target="blank" class="contact-link flex flex-row items-center h-1/3 w-full border-l-8 border-gray-500 bg-Card cursor-pointer gap-10 z-10 relative transition-all duration-700 ease-out hover:border-l-[24px] hover:border-blue-200 hover:h-80">
-                            <div class="pusher w-10 transition-all duration-700 ease-out"></div>
-                            <img src="{{ asset('assets/images/icons/email_logo.png') }}" alt="" class="h-2/3">
-                            <p class="link-title text-5xl text-gray-300">Email</p>
-                            <div class="image-filter absolute w-full h-full backdrop-grayscale backdrop-blur-lg -z-10 transition-all duration-1000 ease-out"></div>
-                            <div class="bg-cover w-full absolute -z-20 pl-[10%] text-7xl text-gray-300 contact-link-text">cgiraldolozano@gmail.com</div>
-                        </a> --}}
                     </div>
                 </section>
 
