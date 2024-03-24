@@ -18,7 +18,7 @@ for (let i = 0; i < languageSelectorOptions.length; i++) {
     const languageOption = languageSelectorOptions[i];
     
     languageOption.addEventListener('click', (e) => {
-        window.location = languageOption.dataset.lang + '/';
+        window.location = languageOption.dataset.lang;
     });
 }
 
