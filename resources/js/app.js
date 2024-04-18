@@ -105,6 +105,7 @@ const projects = document.getElementById('projects');
 const skills = document.getElementById('skills');
 const contact = document.getElementById('contact');
 
+const projectCardContainers = projects.getElementsByClassName('project-card-container');
 const cards = skills.getElementsByClassName('card');
 
 function isScrolledIntoView(elem, offset = 0)
@@ -137,12 +138,38 @@ function toggleSkills(show = true) {
     }
 }
 
+function toggleProjects(show = true) {
+    if (show && projects.dataset.isshown == 'false') {
+        for (let i = 0; i < projectCardContainers.length; i++) {
+            const projectCardContainer = projectCardContainers[i];
+            
+            setTimeout((e) => {
+                projectCardContainer.style.opacity = '1';
+            }, 200 * i);
+            
+        }
+
+        projects.dataset.isshown = 'true'
+    } else if (!show && projects.dataset.isshown == 'true') {
+        for (let i = 0; i < projectCardContainers.length; i++) {
+            const projectCardContainer = projectCardContainers[i];
+            
+            setTimeout((e) => {
+                projectCardContainer.style.opacity = '0';
+            }, 200 * i);
+            
+        }
+
+        projects.dataset.isshown = 'false'
+    }
+}
+
 document.addEventListener('scroll', (e) => {
 
-    if (isScrolledIntoView(projects)) {
-        // toggleProjects();
+    if (isScrolledIntoView(projects, 400)) {
+        toggleProjects();
     } else {
-        // toggleProjects(false);
+        toggleProjects(false);
     }
 
     if (isScrolledIntoView(skills, 200)) {

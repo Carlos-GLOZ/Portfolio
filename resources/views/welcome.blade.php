@@ -24,6 +24,7 @@
         @vite(['resources/css/app.css'])
         @vite(['resources/js/app.js'])
         @vite(['resources/js/language_selection.js'])
+        @vite(['resources/js/projects_menu.js'])
     </head>
     <body class="antialiased">
         <div class="w-full bg-Default min-h-screen">
@@ -74,12 +75,32 @@
             <div class="flex flex-col">
 
                 {{-- Projects --}}
-                <section id="projects" class="mt-80" data-isShown="false">
+                <section id="projects" class="w-full flex justify-center pl-96 pr-36 mt-80 mb-60" data-isShown="false">
+                    <div id="project-cards-container" class="w-full flex flex-col gap-10 transition-all duration-300">
+                        {{-- 
+                                    REMEMBER TO CHANGE data-projectCardNo VALUE FOR EACH NEW CARD. SHOULD BE NUMERATED IN CARDINAL ORDER
+                            --}}
+                        {{-- Card container --}}
+                        <div class="flex flex-col gap-3">
+                            <div class="project-card-container w-full flex flex-row gap-3 opacity-0 transition-all duration-300" data-isActive="false" data-projectCardNo='1'>
+                                <div class="z-10 project-card w-full h-60 bg-Card hover:bg-CardHighlight rounded-3xl p-16 transition-all duration-300 cursor-pointer flex justify-start items-center" style="transition: width 500ms, background-color 300ms, color 300ms">
+                                    <p class="text-center text-gray-300 text-5xl">CAHM Tienda de Muebles</p>
+                                </div>
+    
+                                <a href="" target="_blank" class="z-0 close-card-button h-60 aspect-square bg-Card hover:bg-CardHighlight rounded-3xl p-16 transition-all duration-700 cursor-pointer flex justify-center items-center absolute opacity-0" style="transition: opacity 700ms, background-color 300ms">
+                                    <i class="block h-20 aspect-square bg-no-repeat bg-cover" style="background-image: url('{{ asset('assets/images/icons/up-right-from-square-solid.svg') }}')"></i>
+                                </a>
+                            </div>
 
+                            <div class="project-showcase w-full h-0 opacity-0 transition-all duration-500 rounded-lg" style="background-image: url('{{ asset('assets/images/backgrounds/furniture_shop.png') }}')">
+
+                            </div>
+                        </div>
+                    </div>
                 </section>
 
                 {{-- Skills --}}
-                <section id="skills" class="w-full flex justify-center pl-96 pr-36" data-isShown="false">
+                <section id="skills" class="w-full flex justify-center pl-96 pr-36 mt-96 mb-60" data-isShown="false">
                     <div class="w-full">
                         <div class="flex flex-wrap gap-14 justify-center">
                             
@@ -132,7 +153,7 @@
                 </section>
 
                 {{-- Contact --}}
-                <section id="contact" class="w-full flex justify-center pl-96 pr-36 mt-64 mb-60" data-isShown="false">
+                <section id="contact" class="w-full flex justify-center pl-96 pr-36 mt-96 mb-60" data-isShown="false">
                     <div class="w-full h-[38rem] flex flex-col gap-4 contact-links-container">
                         <a href="https://github.com/Carlos-GLOZ" target="blank" class="contact-link flex flex-row items-center h-1/3 w-full border-l-8 border-gray-500 bg-Card cursor-pointer gap-10 z-10 relative transition-all duration-700 ease-out hover:border-l-[24px] hover:border-blue-200 hover:h-80">
                             <div class="pusher w-10 transition-all duration-700 ease-out"></div>
