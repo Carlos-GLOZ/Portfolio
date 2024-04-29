@@ -25,6 +25,7 @@
         @vite(['resources/js/app.js'])
         @vite(['resources/js/language_selection.js'])
         @vite(['resources/js/projects_menu.js'])
+        @vite(['resources/js/contacts_menu.js'])
     </head>
     <body class="antialiased">
         <div class="w-full bg-Default min-h-screen">
@@ -106,96 +107,73 @@
                             
                             <div class="card w-72 bg-Card p-16 flex flex-col justify-around items-center gap-8 rounded-3xl hover:bg-CardHighlight transition-all duration-300 opacity-0">
                                 <img src="{{ asset('assets/images/icons/python_logo.png') }}" alt="" class="w-20">
-                                <p class="text-center text-gray-300 text-2xl font-semibold">Python</p>
+                                <p class="text-center text-gray-300 text-2xl font-semibold transition-all duration-300">Python</p>
                             </div>
                             
                             <div class="card w-72 bg-Card p-16 flex flex-col justify-around items-center gap-8 rounded-3xl hover:bg-CardHighlight transition-all duration-300 opacity-0">
                                 <img src="{{ asset('assets/images/icons/html_css_logo.png') }}" alt="" class="w-40">
-                                <p class="text-center text-gray-300 text-2xl font-semibold">Html & CSS</p>
+                                <p class="text-center text-gray-300 text-2xl font-semibold transition-all duration-300">Html & CSS</p>
                             </div>
                             
                             <div class="card w-72 bg-Card p-16 flex flex-col justify-around items-center gap-8 rounded-3xl hover:bg-CardHighlight transition-all duration-300 opacity-0">
                                 <img src="{{ asset('assets/images/icons/php_logo.png') }}" alt="" class="w-28">
-                                <p class="text-center text-gray-300 text-2xl font-semibold">PHP</p>
+                                <p class="text-center text-gray-300 text-2xl font-semibold transition-all duration-300">PHP</p>
                             </div>
                             
                             <div class="card w-72 bg-Card p-16 flex flex-col justify-around items-center gap-8 rounded-3xl hover:bg-CardHighlight transition-all duration-300 opacity-0">
                                 <img src="{{ asset('assets/images/icons/git_logo.png') }}" alt="" class="w-20">
-                                <p class="text-center text-gray-300 text-2xl font-semibold">Git Source Control</p>
+                                <p class="text-center text-gray-300 text-2xl font-semibold transition-all duration-300">Git Source Control</p>
                             </div>
                             
                             <div class="card w-72 bg-Card p-16 flex flex-col justify-around items-center gap-8 rounded-3xl hover:bg-CardHighlight transition-all duration-300 opacity-0">
                                 <img src="{{ asset('assets/images/icons/js_logo.png') }}" alt="" class="w-20">
-                                <p class="text-center text-gray-300 text-2xl font-semibold">JavaScript</p>
+                                <p class="text-center text-gray-300 text-2xl font-semibold transition-all duration-300">JavaScript</p>
                             </div>
                             
                             <div class="card w-72 bg-Card p-16 flex flex-col justify-around items-center gap-8 rounded-3xl hover:bg-CardHighlight transition-all duration-300 opacity-0">
                                 <img src="{{ asset('assets/images/icons/laravel_logo.png') }}" alt="" class="w-20">
-                                <p class="text-center text-gray-300 text-2xl font-semibold">Laravel</p>
+                                <p class="text-center text-gray-300 text-2xl font-semibold transition-all duration-300">Laravel</p>
                             </div>
                             
                             <div class="card w-72 bg-Card p-16 flex flex-col justify-around items-center gap-8 rounded-3xl hover:bg-CardHighlight transition-all duration-300 opacity-0">
                                 <img src="{{ asset('assets/images/icons/django_logo.png') }}" alt="" class="h-20">
-                                <p class="text-center text-gray-300 text-2xl font-semibold">Django</p>
+                                <p class="text-center text-gray-300 text-2xl font-semibold" transition-all duration-300>Django</p>
                             </div>
                             
                             <div class="card w-72 bg-Card p-16 flex flex-col justify-around items-center gap-8 rounded-3xl hover:bg-CardHighlight transition-all duration-300 opacity-0">
                                 <img src="{{ asset('assets/images/icons/flutter_logo.png') }}" alt="" class="w-20">
-                                <p class="text-center text-gray-300 text-2xl font-semibold">Flutter</p>
+                                <p class="text-center text-gray-300 text-2xl font-semibold transition-all duration-300">Flutter</p>
                             </div>
                             
                             <div class="card w-72 bg-Card p-16 flex flex-col justify-around items-center gap-8 rounded-3xl hover:bg-CardHighlight transition-all duration-300 opacity-0">
                                 <img src="{{ asset('assets/images/icons/mysql_logo.png') }}" alt="" class="h-20">
-                                <p class="text-center text-gray-300 text-2xl font-semibold">MySQL</p>
+                                <p class="text-center text-gray-300 text-2xl font-semibold transition-all duration-300">MySQL</p>
                             </div>
                         </div>
                     </div>
                 </section>
 
                 {{-- Contact --}}
-                <section id="contact" class="w-full flex justify-center pl-96 pr-36 mt-96 mb-60" data-isShown="false">
-                    <div class="w-full h-[38rem] flex flex-col gap-4 contact-links-container">
-                        <a href="https://github.com/Carlos-GLOZ" target="blank" class="contact-link flex flex-row items-center h-1/3 w-full border-l-8 border-gray-500 bg-Card cursor-pointer gap-10 z-10 relative transition-all duration-700 ease-out hover:border-l-[24px] hover:border-blue-200 hover:h-80">
-                            <div class="pusher w-10 transition-all duration-700 ease-out"></div>
+                <section id="contact" class="w-full flex flex-col justify-center pl-96 pr-36 mt-96 mb-60 gap-6" data-isShown="false">
+                    <div class="w-full h-48 flex flex-row gap-4 contact-links-container">
+                        <a href="https://github.com/Carlos-GLOZ" target="blank" class="contact-link flex flex-row items-center h-full w-1/3 pl-10 rounded-3xl bg-Card cursor-pointer z-10 transition-all duration-300 hover:bg-CardHighlight" data-contactIndex="1">
                             <img src="{{ asset('assets/images/icons/github_logo.png') }}" alt="" class="h-2/3">
-                            <p class="link-title text-5xl text-gray-300">GitHub</p>
-                            <div class="image-filter absolute w-full h-full backdrop-grayscale backdrop-blur-lg -z-10 transition-all duration-1000 ease-out"></div>
-
-                            {{-- Animation controlled by external CSS sheet (app.css) --}}
-                            <div class="contact-link-text-container w-full h-full flex justify-end items-center absolute transition-all duration-1000 ease-out">
-                                <div class="contact-link-text-container-padding-secondary transition-all duration-1000 ease-out"></div>
-                                <div class="bg-cover -z-20 text-7xl text-gray-300 contact-link-text text-nowrap">Carlos-GLOZ</div>
-                                <div class="contact-link-text-container-padding-primary w-[10%] transition-all duration-1000 ease-out"></div>
-                            </div>
+                            <p class="link-title text-5xl text-gray-300 transition-all duration-300 w-full text-center">GitHub</p>
                         </a>
-
-                        <a href="https://www.linkedin.com/in/carlos-giraldo-lozano-319a36225/" target="blank" class="contact-link flex flex-row-reverse items-center h-1/3 w-full border-r-8 border-gray-500 bg-Card cursor-pointer gap-10 z-10 relative transition-all duration-700 ease-out hover:border-r-[24px] hover:border-blue-200 hover:h-80">
-                            <div class="pusher w-10 transition-all duration-700 ease-out"></div>
+                        
+                        <a href="https://www.linkedin.com/in/carlos-giraldo-lozano-319a36225/" target="blank" class="contact-link flex flex-row items-center h-full w-1/3 pl-10 rounded-3xl bg-Card cursor-pointer z-10 transition-all duration-300 hover:bg-CardHighlight" data-contactIndex="2">
                             <img src="{{ asset('assets/images/icons/linkedin_logo.png') }}" alt="" class="h-2/3">
-                            <p class="link-title text-5xl text-gray-300">LinkedIn</p>
-                            <div class="image-filter absolute w-full h-full backdrop-grayscale backdrop-blur-lg -z-10 transition-all duration-1000 ease-out"></div>
-                            
-                            {{-- Animation controlled by external CSS sheet (app.css) --}}
-                            <div class="contact-link-text-container w-full h-full flex justify-start items-center absolute transition-all duration-1000 ease-out">
-                                <div class="contact-link-text-container-padding-primary w-[10%] transition-all duration-1000 ease-out"></div>
-                                <div class="bg-cover -z-20 text-7xl text-gray-300 contact-link-text text-nowrap">Carlos Giraldo Lozano</div>
-                                <div class="contact-link-text-container-padding-secondary transition-all duration-1000 ease-out"></div>
-                            </div>
+                            <p class="link-title text-5xl text-gray-300 transition-all duration-300 w-full text-center">LinkedIn</p>
                         </a>
-
-                        <a href="mailto:cgiraldolozano@gmail.com" target="blank" class="contact-link flex flex-row items-center h-1/3 w-full border-l-8 border-gray-500 bg-Card cursor-pointer gap-10 z-10 relative transition-all duration-700 ease-out hover:border-l-[24px] hover:border-blue-200 hover:h-80">
-                            <div class="pusher w-10 transition-all duration-700 ease-out"></div>
+                        
+                        <a href="mailto:cgiraldolozano@gmail.com" target="blank" class="contact-link flex flex-row items-center h-full w-1/3 pl-10 rounded-3xl bg-Card cursor-pointer z-10 transition-all duration-300 hover:bg-CardHighlight" data-contactIndex="0">
                             <img src="{{ asset('assets/images/icons/email_logo.png') }}" alt="" class="h-2/3">
-                            <p class="link-title text-5xl text-gray-300">Email</p>
-                            <div class="image-filter absolute w-full h-full backdrop-grayscale backdrop-blur-lg -z-10 transition-all duration-1000 ease-out"></div>
-                            
-                            {{-- Animation controlled by external CSS sheet (app.css) --}}
-                            <div class="contact-link-text-container w-full h-full flex justify-end items-center absolute transition-all duration-1000 ease-out">
-                                <div class="contact-link-text-container-padding-secondary transition-all duration-1000 ease-out"></div>
-                                <div class="bg-cover -z-20 text-7xl text-gray-300 contact-link-text text-nowrap">cgiraldolozano@gmail.com</div>
-                                <div class="contact-link-text-container-padding-primary w-[10%] transition-all duration-1000 ease-out"></div>
-                            </div>
+                            <p class="link-title text-5xl text-gray-300 transition-all duration-300 w-full text-center">Email</p>
                         </a>
+                    </div>
+                    <div id="contact-showcase" class="w-full h-[40rem] relative">
+                        <div class="contact-showcase-image w-full h-full absolute bg-cover bg-center transition-all duration-300" style="background-image: url('{{ asset('assets/images/backgrounds/github_page.png') }}')" data-contactIndex="1"></div>
+                        <div class="contact-showcase-image w-full h-full absolute bg-cover bg-center opacity-0 transition-all duration-300" style="background-image: url('{{ asset('assets/images/backgrounds/linkedin_page.png') }}')" data-contactIndex="2"></div>
                     </div>
                 </section>
 
