@@ -5,7 +5,7 @@ function toggleCard(toggleOn, projectCard, closeCardButton, projectShowcase) {
     const buttonTransitionDuration = parseFloat(getComputedStyle(closeCardButton).transitionDuration) * 1000; // transition duration set to card in ms
 
     if (toggleOn) {
-        projectCard.style.width = '80%';
+        projectCard.style.width = '81%';
         
         // Show close button
         setTimeout((e) => {

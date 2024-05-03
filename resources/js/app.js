@@ -107,6 +107,9 @@ const contact = document.getElementById('contact');
 
 const projectCardContainers = projects.getElementsByClassName('project-card-container');
 const cards = skills.getElementsByClassName('card');
+const contactStaggerItems = contact.getElementsByClassName('contact-stagger-item');
+
+const projectShowcase = document.getElementById('project-showcase');
 
 function isScrolledIntoView(elem, offset = 0)
 {
@@ -149,18 +152,49 @@ function toggleProjects(show = true) {
             
         }
 
+        projectShowcase.style.opacity = '1';
+
         projects.dataset.isshown = 'true'
     } else if (!show && projects.dataset.isshown == 'true') {
         for (let i = 0; i < projectCardContainers.length; i++) {
             const projectCardContainer = projectCardContainers[i];
             
+            projectCardContainer.style.opacity = '0';
+            // setTimeout((e) => {
+            // }, 200 * i);
+            
+        }
+
+        projectShowcase.style.opacity = '0';
+
+        projects.dataset.isshown = 'false'
+    }
+}
+
+function toggleContact(show = true) {
+    console.log(contactStaggerItems);
+    if (show && contact.dataset.isshown == 'false') {
+        for (let i = 0; i < contactStaggerItems.length; i++) {
+            const contactStaggerItem = contactStaggerItems[i];
+            
             setTimeout((e) => {
-                projectCardContainer.style.opacity = '0';
+                contactStaggerItem.style.opacity = '1';
             }, 200 * i);
             
         }
 
-        projects.dataset.isshown = 'false'
+        contact.dataset.isshown = 'true'
+    } else if (!show && contact.dataset.isshown == 'true') {
+        for (let i = 0; i < contactStaggerItems.length; i++) {
+            const contactStaggerItem = contactStaggerItems[i];
+            
+            contactStaggerItem.style.opacity = '0';
+            // setTimeout((e) => {
+            // }, 200 * i);
+            
+        }
+
+        contact.dataset.isshown = 'false'
     }
 }
 
@@ -179,8 +213,8 @@ document.addEventListener('scroll', (e) => {
     }
     
     if (isScrolledIntoView(contact)) {
-        // toggleContact();
+        toggleContact();
     } else {
-        // toggleContact(false);
+        toggleContact(false);
     }
 });

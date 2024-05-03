@@ -51,7 +51,7 @@
 
             {{-- Banner --}}
             <div class="w-full flex justify-center">
-                <div class="w-[969px] h-[333px] mt-40 mb-16 border-r-4 border-l-4 border-black flex justify-center align-middle flex-col gap-11">
+                <div class="w-[969px] h-[333px] mt-40 mb-16 border-r-4 border-l-4 border-gray-500 flex justify-center align-middle flex-col gap-11">
                     <p class="text-8xl font-Montserrat text-gray-300 text-center">Carlos Giraldo</p>
                     <p class="text-2xl font-Montserrat text-gray-600 text-center">{{ ucfirst(__('fullstack web developer')) }}</p>
                 </div>
@@ -83,7 +83,7 @@
                             --}}
                         {{-- Card container --}}
                         <div class="flex flex-col gap-3">
-                            <div class="project-card-container w-full flex flex-row gap-3 opacity-0 transition-all duration-300" data-isActive="false" data-projectCardNo='1'>
+                            <div class="project-card-container w-full flex flex-row justify-between opacity-0 transition-all duration-300" data-isActive="false" data-projectCardNo='1'>
                                 <div class="z-10 project-card w-full h-60 bg-Card hover:bg-CardHighlight rounded-3xl p-16 transition-all duration-300 cursor-pointer flex justify-start items-center" style="transition: width 500ms, background-color 300ms, color 300ms">
                                     <p class="text-center text-gray-300 text-5xl">CAHM Tienda de Muebles</p>
                                 </div>
@@ -93,7 +93,7 @@
                                 </a>
                             </div>
 
-                            <div class="project-showcase w-full h-0 opacity-0 transition-all duration-500 rounded-lg" style="background-image: url('{{ asset('assets/images/backgrounds/furniture_shop.png') }}')">
+                            <div id="project-showcase" class="project-showcase w-full h-0 opacity-0 transition-all duration-500 rounded-lg" style="background-image: url('{{ asset('assets/images/backgrounds/furniture_shop.png') }}')">
 
                             </div>
                         </div>
@@ -156,23 +156,23 @@
                 {{-- Contact --}}
                 <section id="contact" class="w-full flex flex-col justify-center pl-96 pr-36 mt-96 mb-60 gap-6" data-isShown="false">
                     <div class="w-full h-48 flex flex-row gap-4 contact-links-container">
-                        <a href="https://github.com/Carlos-GLOZ" target="blank" class="contact-link flex flex-row items-center h-full w-1/3 pl-10 rounded-3xl bg-Card cursor-pointer z-10 transition-all duration-300 hover:bg-CardHighlight" data-contactIndex="1">
+                        <a href="https://github.com/Carlos-GLOZ" target="blank" class="contact-stagger-item opacity-0 contact-link flex flex-row items-center h-full w-1/3 pl-10 rounded-3xl bg-Card cursor-pointer z-10 transition-all duration-300 hover:bg-CardHighlight" data-contactIndex="1">
                             <img src="{{ asset('assets/images/icons/github_logo.png') }}" alt="" class="h-2/3">
                             <p class="link-title text-5xl text-gray-300 transition-all duration-300 w-full text-center">GitHub</p>
                         </a>
                         
-                        <a href="https://www.linkedin.com/in/carlos-giraldo-lozano-319a36225/" target="blank" class="contact-link flex flex-row items-center h-full w-1/3 pl-10 rounded-3xl bg-Card cursor-pointer z-10 transition-all duration-300 hover:bg-CardHighlight" data-contactIndex="2">
+                        <a href="https://www.linkedin.com/in/carlos-giraldo-lozano-319a36225/" target="blank" class="contact-stagger-item opacity-0 contact-link flex flex-row items-center h-full w-1/3 pl-10 rounded-3xl bg-Card cursor-pointer z-10 transition-all duration-300 hover:bg-CardHighlight" data-contactIndex="2">
                             <img src="{{ asset('assets/images/icons/linkedin_logo.png') }}" alt="" class="h-2/3">
                             <p class="link-title text-5xl text-gray-300 transition-all duration-300 w-full text-center">LinkedIn</p>
                         </a>
                         
-                        <a href="mailto:cgiraldolozano@gmail.com" target="blank" class="contact-link flex flex-row items-center h-full w-1/3 pl-10 rounded-3xl bg-Card cursor-pointer z-10 transition-all duration-300 hover:bg-CardHighlight" data-contactIndex="0">
+                        <a href="mailto:cgiraldolozano@gmail.com" target="blank" class="contact-stagger-item opacity-0 contact-link flex flex-row items-center h-full w-1/3 pl-10 rounded-3xl bg-Card cursor-pointer z-10 transition-all duration-300 hover:bg-CardHighlight" data-contactIndex="0">
                             <img src="{{ asset('assets/images/icons/email_logo.png') }}" alt="" class="h-2/3">
                             <p class="link-title text-5xl text-gray-300 transition-all duration-300 w-full text-center">Email</p>
                         </a>
                     </div>
                     <div id="contact-showcase" class="w-full h-[40rem] relative">
-                        <div class="contact-showcase-image w-full h-full absolute bg-cover bg-center transition-all duration-300" style="background-image: url('{{ asset('assets/images/backgrounds/github_page.png') }}')" data-contactIndex="1"></div>
+                        <div class="contact-showcase-image contact-stagger-item opacity-0 w-full h-full absolute bg-cover bg-center transition-all duration-300" style="background-image: url('{{ asset('assets/images/backgrounds/github_page.png') }}')" data-contactIndex="1"></div>
                         <div class="contact-showcase-image w-full h-full absolute bg-cover bg-center opacity-0 transition-all duration-300" style="background-image: url('{{ asset('assets/images/backgrounds/linkedin_page.png') }}')" data-contactIndex="2"></div>
                     </div>
                 </section>
