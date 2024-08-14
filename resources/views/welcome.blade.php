@@ -30,6 +30,13 @@
     </head>
     <body class="antialiased">
         <div id="main-container" class="w-full bg-Default min-h-screen">
+            {{-- Page background --}}
+            <div class="page-background fixed w-full h-full flex justify-center items-center -z-10">
+                {{-- <svg id="background-circle" height="100" width="100" class="absolute">
+                    <circle r="45" fill="transparent" stroke="white" stroke-width="3" cx="50" cy="50" />
+                </svg> --}}
+            </div>
+
             {{-- Lnaguage picker & Responsive menu button --}}
             <div class="w-full absolute flex top-10 justify-around">
                 {{-- Responsive menu button --}}
@@ -73,7 +80,7 @@
             </div>
 
             {{-- Menu --}}
-            <div id="menu" class="w-full flex justify-center font-Montserrat text-4xl text-gray-300 py-16 sticky top-0">
+            <div id="menu" class="w-full hidden justify-center font-Montserrat text-4xl text-gray-300 py-16 sticky top-0 lg:flex">
                 {{-- Item --}}
                 <div id="menu-item-1" class="border-r-2 border-gray-300 px-8 py-2.5 cursor-pointer menu-item bg-Default z-20 transition-all ease-out duration-500">
                     <a href="#projects" class="highlightable transition-all ease-in-out duration-500">{{ mb_strtoupper(__('projects')) }}</a>
@@ -115,7 +122,7 @@
             <div class="flex flex-col">
 
                 {{-- Projects --}}
-                <section id="projects" class="w-full flex justify-center pl-96 pr-36 mt-80 mb-60" data-isShown="false">
+                <section id="projects" class="w-full flex justify-center pl-[20%] pr-[10%] mt-80 mb-60" data-isShown="false">
                     <div id="project-cards-container" class="w-full flex flex-col gap-10 transition-all duration-300">
                         {{-- 
                                     REMEMBER TO CHANGE data-projectCardNo VALUE FOR EACH NEW CARD. SHOULD BE NUMERATED IN CARDINAL ORDER
@@ -140,7 +147,7 @@
                 </section>
 
                 {{-- Skills --}}
-                <section id="skills" class="w-full flex justify-center pl-96 pr-36 mt-96 mb-60" data-isShown="false">
+                <section id="skills" class="w-full flex justify-center pl-[20%] pr-[10%] mt-96 mb-60" data-isShown="false">
                     <div class="w-full">
                         <div class="flex flex-wrap gap-14 justify-center">
                             
@@ -193,7 +200,7 @@
                 </section>
 
                 {{-- Contact --}}
-                <section id="contact" class="w-full flex flex-col justify-center pl-96 pr-36 mt-96 mb-60 gap-6" data-isShown="false">
+                <section id="contact" class="w-full flex flex-col justify-center pl-[20%] pr-[10%] mt-96 mb-60 gap-6" data-isShown="false">
                     <div class="w-full h-48 flex flex-row gap-4 contact-links-container">
                         <a href="https://github.com/Carlos-GLOZ" target="blank" class="contact-stagger-item opacity-0 contact-link flex flex-row items-center h-full w-1/3 pl-10 rounded-3xl bg-Card cursor-pointer z-10 transition-all duration-300 hover:bg-CardHighlight" data-contactIndex="1">
                             <img src="{{ asset('assets/images/icons/github_logo.png') }}" alt="" class="h-2/3">

@@ -107,6 +107,14 @@ window.addEventListener('beforeunload', (e) => {
     window.scrollTo({top: 0});
 })
 
+window.addEventListener('resize', (e) => {
+    if (scrollY == 0) {
+        menuItemsInitialPos['menu-item-1'] = menuItem1.getBoundingClientRect().left;
+        menuItemsInitialPos['menu-item-2'] = menuItem2.getBoundingClientRect().left;
+        menuItemsInitialPos['menu-item-3'] = menuItem3.getBoundingClientRect().left;
+    }
+})
+
 window.addEventListener('load', (e) => {
     // Offset responsive menu
     responsiveMenu.style.left = "-" + getComputedStyle(responsiveMenu).width;
@@ -149,7 +157,7 @@ for (let i = 0; i < responsiveMenuItems.length; i++) {
 }
 
 /**
- * SECTIONS VISIBILITY
+ * SECTIONS VISIBILITY -----------------------------------
  */
 const projects = document.getElementById('projects');
 const skills = document.getElementById('skills');
@@ -222,7 +230,6 @@ function toggleProjects(show = true) {
 }
 
 function toggleContact(show = true) {
-    console.log(contactStaggerItems);
     if (show && contact.dataset.isshown == 'false') {
         for (let i = 0; i < contactStaggerItems.length; i++) {
             const contactStaggerItem = contactStaggerItems[i];
