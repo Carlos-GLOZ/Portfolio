@@ -19,10 +19,16 @@ const menuItemsVerticalTransforms = {
     'menu-item-3': 200,
 }
 
+const responsiveMenu = document.getElementById('responsive-menu');
+const responsiveMenuOpenButton = document.getElementById('responsive-menu-open-button');
+const responsiveMenuCloseButton = document.getElementById('responsive-menu-close-button');
+
+const responsiveMenuItems = document.getElementsByClassName('responsive-menu-item');
+
 /**
  * MENU -----------------------------------
  */
-// Will return wether or not the menu is completely hidden
+// Will return wether or not the menu is completely hidden horizontally (and the vertical version should be deployed)
 function updateMenuPos() {
     // Move menu elements
     for (let i = 0; i < menuItems.length; i++) {
@@ -39,21 +45,37 @@ function updateMenuPos() {
     return false;
 }
 
-function deployVerticalMenu(retract = false) {
-    if (retract) {
+// Deploy or retract the vertical version of the menu
+function toggleVerticalMenu(retract = false) {
+    if (retract) { // Close menu
         for (let i = 0; i < menuItems.length; i++) {
             const item = menuItems[i];
 
             item.style.borderColor = '';
+            item.style.backgroundColor = '';
         }
-    } else {
+    } else { // Open menu
         for (let i = 0; i < menuItems.length; i++) {
             const item = menuItems[i];
 
             item.style.borderColor = 'transparent';
+            item.style.backgroundColor = 'transparent';
 
             item.style.transform = 'translate(-' + menuItemsInitialPos[item.id] + 'px, ' + menuItemsVerticalTransforms[item.id] + 'px)';
         }
+    }
+}
+
+// Deploy or retract the full-page responsive menu
+function toggleResponsiveMenu(retract = false) {
+    if (retract) { // Close menu
+        responsiveMenu.style.transform = "translate(-" + getComputedStyle(responsiveMenu).width + ")";
+        // responsiveMenu.style.display = 'none';
+        document.getElementById('main-container').style.overflow = 'auto'; // Enable overflow to restore scrolling
+    } else { // Open menu
+        responsiveMenu.style.display = 'flex';
+        responsiveMenu.style.transform = "translate(" + getComputedStyle(responsiveMenu).width + ")";
+        document.getElementById('main-container').style.overflow = 'hidden'; // Hide overflow to prevent scrolling
     }
 }
 
@@ -74,15 +96,20 @@ function highlightMenuItem(highlightItem = null) {
 
 document.addEventListener('scroll', (e) => {
     if (updateMenuPos()) {
-        deployVerticalMenu();
+        toggleVerticalMenu();
     } else {
-        deployVerticalMenu(true);
+        toggleVerticalMenu(true);
     }
 });
 
 window.addEventListener('beforeunload', (e) => {
     document.getElementsByTagName('html')[0].style.scrollBehavior = 'auto';
     window.scrollTo({top: 0});
+})
+
+window.addEventListener('load', (e) => {
+    // Offset responsive menu
+    responsiveMenu.style.left = "-" + getComputedStyle(responsiveMenu).width;
 })
 
 // Event listeneres for menu item highlights
@@ -96,6 +123,29 @@ for (let i = 0; i < menuItems.length; i++) {
     item.addEventListener('mouseout', (e) => {
         highlightMenuItem()
     })
+}
+
+// Event listeners for responsive menu buttons
+responsiveMenuOpenButton.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    toggleResponsiveMenu();
+})
+
+responsiveMenuCloseButton.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    toggleResponsiveMenu(true);
+})
+
+for (let i = 0; i < responsiveMenuItems.length; i++) {
+    const item = responsiveMenuItems[i];
+
+    const itemLink = item.getElementsByTagName('a')[0];
+
+    item.addEventListener('click', (e) => {
+        toggleResponsiveMenu(true);
+    });
 }
 
 /**

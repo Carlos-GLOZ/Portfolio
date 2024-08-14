@@ -26,27 +26,42 @@
         @vite(['resources/js/language_selection.js'])
         @vite(['resources/js/projects_menu.js'])
         @vite(['resources/js/contacts_menu.js'])
+        @vite(['resources/js/background_effect.js'])
     </head>
     <body class="antialiased">
-        <div class="w-full bg-Default min-h-screen">
-            {{-- Language picker --}}
-            <div class="absolute right-40 top-10">
-                <p id="language-selector-current" class="bg-[transparent] text-gray-300 w-16 h-8s border-b-2 border-transparent hover:border-gray-300 flex flex-row justify-around cursor-pointer">
-                    {{ strtoupper($locale) }}
-                    <img src="{{ asset('assets/images/icons/'.$locale.'_flag.png') }}" alt="{{ $locale }}" class="w-5 object-contain"> 
-                </p>
+        <div id="main-container" class="w-full bg-Default min-h-screen">
+            {{-- Lnaguage picker & Responsive menu button --}}
+            <div class="w-full absolute flex top-10 justify-around">
+                {{-- Responsive menu button --}}
+                <div class="lg:hidden">
+                    <button id="responsive-menu-open-button">
+                        <img src="{{ asset('assets/images/icons/bars-staggered-solid.svg') }}" alt="bars-staggered-solid" class="w-5 object-contain invert"> 
+                    </button>
+                </div>
 
-                <div id="language-selector-list" class="hidden mt-2" data-hidden="true">
-                    @foreach ($supported_locales as $sup_locale)
-                        @if ($sup_locale != $locale)
-                            <p class="language-selector-option bg-[transparent] text-gray-300 w-16 h-8s border-b-2 border-transparent hover:border-gray-300 flex flex-row justify-around cursor-pointer" data-lang="{{ $sup_locale }}">
-                                {{ strtoupper($sup_locale) }}
-                                <img src="{{ asset('assets/images/icons/'.$sup_locale.'_flag.png') }}" alt="{{ $sup_locale }}" class="w-5 object-contain"> 
-                            </p>
-                        @endif
-                    @endforeach
+                {{-- Padding block for alignment --}}
+                <div class="hidden lg:block"></div>
+
+                {{-- Language picker --}}
+                <div class="">
+                    <p id="language-selector-current" class="bg-[transparent] text-gray-300 w-16 h-8s border-b-2 border-transparent hover:border-gray-300 flex flex-row justify-around cursor-pointer">
+                        {{ strtoupper($locale) }}
+                        <img src="{{ asset('assets/images/icons/'.$locale.'_flag.png') }}" alt="{{ $locale }}" class="w-5 object-contain"> 
+                    </p>
+    
+                    <div id="language-selector-list" class="hidden mt-2" data-hidden="true">
+                        @foreach ($supported_locales as $sup_locale)
+                            @if ($sup_locale != $locale)
+                                <p class="language-selector-option bg-[transparent] text-gray-300 w-16 h-8s border-b-2 border-transparent hover:border-gray-300 flex flex-row justify-around cursor-pointer" data-lang="{{ $sup_locale }}">
+                                    {{ strtoupper($sup_locale) }}
+                                    <img src="{{ asset('assets/images/icons/'.$sup_locale.'_flag.png') }}" alt="{{ $sup_locale }}" class="w-5 object-contain"> 
+                                </p>
+                            @endif
+                        @endforeach
+                    </div>
                 </div>
             </div>
+
             
 
             {{-- Banner --}}
@@ -69,6 +84,30 @@
                 </div>
                 {{-- Item --}}
                 <div id="menu-item-3" class="px-8 py-2.5 cursor-pointer menu-item bg-Default z-0 transition-all ease-out duration-500">
+                    <a href="#contact" class="highlightable transition-all ease-in-out duration-500">{{ mb_strtoupper(__('contact')) }}</a>
+                </div>
+            </div>
+
+            {{-- Responsive Menu --}}
+            <div id="responsive-menu" class="hidden w-screen max-w-full h-screen fixed font-Montserrat text-4xl text-gray-300 top-0 lg:hidden z-20 bg-Card flex-col transition-all ease-in-out duration-500">
+                
+                {{-- Close menu button --}}
+                <div class="w-full h-20 p-6 flex flex-row-reverse">
+                    <button id="responsive-menu-close-button">
+                        <img src="{{ asset('assets/images/icons/x-solid.svg') }}" alt="{{ $sup_locale }}" class="w-5 object-contain invert"> 
+                    </button>
+                </div>
+
+                {{-- Item --}}
+                <div id="responsive-menu-item-1" class="border-b-2 border-gray-300 py-8 cursor-pointer responsive-menu-item z-20 transition-all ease-out duration-500 px-6">
+                    <a href="#projects" class="highlightable transition-all ease-in-out duration-500">{{ mb_strtoupper(__('projects')) }}</a>
+                </div>
+                {{-- Item --}}
+                <div id="responsive-menu-item-2" class="border-b-2 border-gray-300 py-8 cursor-pointer responsive-menu-item z-10 transition-all ease-out duration-500 px-6">
+                    <a href="#skills" class="highlightable transition-all ease-in-out duration-500">{{ mb_strtoupper(__('skills')) }}</a>
+                </div>
+                {{-- Item --}}
+                <div id="responsive-menu-item-3" class="py-8 cursor-pointer responsive-menu-item z-0 transition-all ease-out duration-500 px-6">
                     <a href="#contact" class="highlightable transition-all ease-in-out duration-500">{{ mb_strtoupper(__('contact')) }}</a>
                 </div>
             </div>
