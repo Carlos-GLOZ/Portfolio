@@ -37,8 +37,8 @@
                 </svg> --}}
             </div>
 
-            {{-- Lnaguage picker & Responsive menu button --}}
-            <div class="w-full absolute flex top-10 justify-around">
+            {{-- Language picker & Responsive menu button --}}
+            <div class="w-full fixed top-0 flex py-8 justify-around bg-Card z-20 lg:bg-opacity-0 lg:absolute">
                 {{-- Responsive menu button --}}
                 <div class="lg:hidden">
                     <button id="responsive-menu-open-button">
@@ -96,7 +96,7 @@
             </div>
 
             {{-- Responsive Menu --}}
-            <div id="responsive-menu" class="hidden w-screen max-w-full h-screen fixed font-Montserrat text-4xl text-gray-300 top-0 lg:hidden z-20 bg-Card flex-col transition-all ease-in-out duration-500">
+            <div id="responsive-menu" class="hidden w-full max-w-full h-screen fixed font-Montserrat text-4xl text-gray-300 top-0 lg:hidden z-50 bg-Card flex-col transition-all ease-in-out duration-500">
                 
                 {{-- Close menu button --}}
                 <div class="w-full h-20 p-6 flex flex-row-reverse">
