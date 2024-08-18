@@ -25,7 +25,9 @@ export default {
     backgroundColor: {
       'Default': '#222831',
       'Card': '#393E46',
-      'CardHighlight': '#f0bf6c',
+      'Card-50': 'rgba(57, 62, 70, 0.50)',
+      'Card-75': 'rgba(57, 62, 70, 0.75)',
+      'CardHighlight': '#f0bf6c'
     },
   },
   plugins: [],
