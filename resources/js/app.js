@@ -179,9 +179,13 @@ function isScrolledIntoView(elem, offset = 0)
 }
 
 function toggleSkills(show = true) {
+    const sectionTitle = skills.getElementsByClassName('section-title');
+    const skillsSectionAnimationShowcaseIterables = Array.from(sectionTitle).concat(Array.from(cards)); // The items to iterate over and slowly reveal
+
+    
     if (show && skills.dataset.isshown == 'false') {
-        for (let i = 0; i < cards.length; i++) {
-            const card = cards[i];
+        for (let i = 0; i < skillsSectionAnimationShowcaseIterables.length; i++) {
+            const card = skillsSectionAnimationShowcaseIterables[i];
             
             setTimeout((e) => {
                 card.style.opacity = '1';
@@ -190,8 +194,8 @@ function toggleSkills(show = true) {
 
         skills.dataset.isshown = 'true'
     } else if (!show && skills.dataset.isshown == 'true') {
-        for (let i = 0; i < cards.length; i++) {
-            const card = cards[i];
+        for (let i = 0; i < skillsSectionAnimationShowcaseIterables.length; i++) {
+            const card = skillsSectionAnimationShowcaseIterables[i];
             
             card.style.opacity = '0';
         }
@@ -200,9 +204,12 @@ function toggleSkills(show = true) {
 }
 
 function toggleProjects(show = true) {
-    if (show && projects.dataset.isshown == 'false') {
-        for (let i = 0; i < projectCardContainers.length; i++) {
-            const projectCardContainer = projectCardContainers[i];
+    const sectionTitle = projects.getElementsByClassName('section-title');
+    const projectsSectionAnimationShowcaseIterables = Array.from(sectionTitle).concat(Array.from(projectCardContainers)); // The items to iterate over and slowly reveal
+
+    if (show && projects.dataset.isshown == 'false') { // Show projects section
+        for (let i = 0; i < projectsSectionAnimationShowcaseIterables.length; i++) {
+            const projectCardContainer = projectsSectionAnimationShowcaseIterables[i];
             
             setTimeout((e) => {
                 projectCardContainer.style.opacity = '1';
@@ -213,9 +220,9 @@ function toggleProjects(show = true) {
         projectShowcase.style.opacity = '1';
 
         projects.dataset.isshown = 'true'
-    } else if (!show && projects.dataset.isshown == 'true') {
-        for (let i = 0; i < projectCardContainers.length; i++) {
-            const projectCardContainer = projectCardContainers[i];
+    } else if (!show && projects.dataset.isshown == 'true') { // Hide projects section
+        for (let i = 0; i < projectsSectionAnimationShowcaseIterables.length; i++) {
+            const projectCardContainer = projectsSectionAnimationShowcaseIterables[i];
             
             projectCardContainer.style.opacity = '0';
             // setTimeout((e) => {
@@ -230,9 +237,12 @@ function toggleProjects(show = true) {
 }
 
 function toggleContact(show = true) {
+    const sectionTitle = contact.getElementsByClassName('section-title');
+    const contactsSectionAnimationShowcaseIterables = Array.from(sectionTitle).concat(Array.from(contactStaggerItems)); // The items to iterate over and slowly reveal
+
     if (show && contact.dataset.isshown == 'false') {
-        for (let i = 0; i < contactStaggerItems.length; i++) {
-            const contactStaggerItem = contactStaggerItems[i];
+        for (let i = 0; i < contactsSectionAnimationShowcaseIterables.length; i++) {
+            const contactStaggerItem = contactsSectionAnimationShowcaseIterables[i];
             
             setTimeout((e) => {
                 contactStaggerItem.style.opacity = '1';
@@ -242,8 +252,8 @@ function toggleContact(show = true) {
 
         contact.dataset.isshown = 'true'
     } else if (!show && contact.dataset.isshown == 'true') {
-        for (let i = 0; i < contactStaggerItems.length; i++) {
-            const contactStaggerItem = contactStaggerItems[i];
+        for (let i = 0; i < contactsSectionAnimationShowcaseIterables.length; i++) {
+            const contactStaggerItem = contactsSectionAnimationShowcaseIterables[i];
             
             contactStaggerItem.style.opacity = '0';
             // setTimeout((e) => {

@@ -122,7 +122,11 @@
             <div class="flex flex-col">
 
                 {{-- Projects --}}
-                <section id="projects" class="w-full flex justify-center pl-[20%] pr-[10%] mt-80 mb-60" data-isShown="false">
+                <section id="projects" class="w-full flex flex-col gap-10 justify-center pl-[20%] pr-[10%] mt-80 mb-60" data-isShown="false">
+                    <div class="section-title transition-all duration-300 opacity-0">
+                        <p class="font-Montserrat text-4xl text-gray-300">{{ mb_strtoupper(__("some of the projects i've worked on")) }}</p>
+                    </div>
+
                     <div id="project-cards-container" class="w-full flex flex-col gap-10 transition-all duration-300">
                         {{-- 
                                     REMEMBER TO CHANGE data-projectCardNo VALUE FOR EACH NEW CARD. SHOULD BE NUMERATED IN CARDINAL ORDER
@@ -148,7 +152,11 @@
 
                 {{-- Skills --}}
                 <section id="skills" class="w-full flex justify-center pl-[5%] pr-[5%] mt-96 mb-60 lg:pl-[19%] lg:pr-[10%]" data-isShown="false">
-                    <div class="w-full">
+                    <div class="w-full flex flex-col gap-10">
+                        <div class="section-title transition-all duration-300 opacity-0">
+                            <p class="font-Montserrat text-4xl text-gray-300">{{ mb_strtoupper(__("the tools i've used")) }}</p>
+                        </div>
+
                         <div class="flex flex-wrap gap-14 justify-center">
                             
                             <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 rounded-3xl hover:bg-CardHighlight transition-all duration-300 opacity-0 lg:w-72 lg:p-16">
@@ -201,6 +209,10 @@
 
                 {{-- Contact --}}
                 <section id="contact" class="w-full flex flex-col justify-center pl-[20%] pr-[10%] mt-96 mb-60 gap-6" data-isShown="false">
+                    <div class="section-title transition-all duration-300 opacity-0">
+                        <p class="font-Montserrat text-4xl text-gray-300">{{ mb_strtoupper(__("get in touch with me")) }}</p>
+                    </div>
+
                     <div class="w-full h-48 flex flex-row gap-4 contact-links-container">
                         <a href="https://github.com/Carlos-GLOZ" target="blank" class="contact-stagger-item opacity-0 contact-link flex flex-row items-center h-full w-1/3 pl-10 rounded-3xl bg-Card cursor-pointer z-10 transition-all duration-300 hover:bg-CardHighlight" data-contactIndex="1">
                             <img src="{{ asset('assets/images/icons/github_logo.png') }}" alt="" class="h-2/3">
