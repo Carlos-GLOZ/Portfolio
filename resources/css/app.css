@@ -4,9 +4,9 @@
 .card:hover p {
   color: #374151;
 }
-.project-card:hover p {
-  color: #374151;
-}
 .contact-link:hover p {
   color: #374151;
+}
+.project-card-container:hover .project-card-border {
+  background-color: white;
 }

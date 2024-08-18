@@ -1,39 +1,32 @@
 const projectCardContainers = document.getElementsByClassName('project-card-container');
 
-function toggleCard(toggleOn, projectCard, closeCardButton, projectShowcase) {
+function toggleCard(toggleOn, projectCard, projectShowcase, projectInfo) {
     const cardTransitionDuration = parseFloat(getComputedStyle(projectCard).transitionDuration) * 1000; // transition duration set to card in ms
-    const buttonTransitionDuration = parseFloat(getComputedStyle(closeCardButton).transitionDuration) * 1000; // transition duration set to card in ms
+    const infoTransitionDuration = parseFloat(getComputedStyle(projectInfo).transitionDuration) * 1000; // transition duration set to project info in ms
 
     if (toggleOn) {
-        projectCard.style.width = '81%';
-        
-        // Show close button
-        setTimeout((e) => {
-            closeCardButton.style.position = 'relative';
-            closeCardButton.style.opacity = '1';
-        }, cardTransitionDuration)
-
-        // Show product showcase (without delay)
         projectShowcase.style.height = '760px';
         projectShowcase.style.opacity = '1';
 
-    } else {
-        closeCardButton.style.opacity = '0';
-        
-        // Hide close button
         setTimeout((e) => {
-            closeCardButton.style.position = 'absolute';
-            projectCard.style.width = '';
-        }, buttonTransitionDuration + 10)
+            projectInfo.style.opacity = '1';
+        }, cardTransitionDuration);
 
-        // Close product showcase (with delay)
+    } else {
+        projectInfo.style.opacity = '0';
+
         setTimeout((e) => {
             projectShowcase.style.opacity = '0';
             projectShowcase.style.height = '0px';
-        }, buttonTransitionDuration)
-
+        }, infoTransitionDuration);
     }
 }
+
+/**
+ * 
+ * @param {Array} except The cards IDs to ignore 
+ * @returns
+ */
 
 function disableAllProjectCards(except = ['0']) {
     for (let i = 0; i < projectCardContainers.length; i++) {
@@ -41,18 +34,15 @@ function disableAllProjectCards(except = ['0']) {
 
         const cardno = cardContainer.dataset.projectcardno;
 
-        console.log(except.includes(cardContainer.dataset.projectcardno));
-
         // Skip cards 
-        if (except.includes(cardContainer.dataset.projectcardno)) {
+        if (except.includes(cardno)) {
+            
             continue;
         }
-    
-        const projectCard = cardContainer.getElementsByClassName('project-card')[0];
-        const closCardButton = cardContainer.getElementsByClassName('close-card-button')[0];
-        const projectShowcase = cardContainer.parentElement.getElementsByClassName('project-showcase')[0];
 
-        toggleCard(false, projectCard, closCardButton, projectShowcase)
+        const projectShowcase = cardContainer.getElementsByClassName('project-card-showcase')[0];
+
+        toggleCard(false, cardContainer, projectShowcase)
 
         cardContainer.dataset.isactive = 'false';
     }
@@ -63,20 +53,21 @@ function disableAllProjectCards(except = ['0']) {
 for (let i = 0; i < projectCardContainers.length; i++) {
     const cardContainer = projectCardContainers[i];
 
-    const projectCard = cardContainer.getElementsByClassName('project-card')[0];
-    const closCardButton = cardContainer.getElementsByClassName('close-card-button')[0];
-    const projectShowcase = cardContainer.parentElement.getElementsByClassName('project-showcase')[0];
+    const projectShowcase = cardContainer.getElementsByClassName('project-card-showcase')[0];
+    const projectClickable = cardContainer.getElementsByClassName('project-card-clickable')[0];
+    const projectInfo = cardContainer.getElementsByClassName('project-showcase-info')[0];
     
-    projectCard.addEventListener('click', (e) => {
+    projectClickable.addEventListener('click', (e) => {
+
         if (cardContainer.dataset.isactive == 'false') {
             // Disable all active cards
             disableAllProjectCards([cardContainer.dataset.projectcardno]);
 
-            toggleCard(true, projectCard, closCardButton, projectShowcase);
+            toggleCard(true, cardContainer, projectShowcase, projectInfo);
             
             cardContainer.dataset.isactive = 'true';
         } else {
-            toggleCard(false, projectCard, closCardButton, projectShowcase)
+            toggleCard(false, cardContainer, projectShowcase, projectInfo)
 
             cardContainer.dataset.isactive = 'false';
         }

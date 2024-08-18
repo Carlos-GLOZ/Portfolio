@@ -11,7 +11,7 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 
         <!-- Styles -->
         <style>
@@ -122,9 +122,9 @@
             <div class="flex flex-col">
 
                 {{-- Projects --}}
-                <section id="projects" class="w-full flex flex-col gap-10 justify-center pl-[20%] pr-[10%] mt-80 mb-60" data-isShown="false">
-                    <div class="section-title transition-all duration-300 opacity-0">
-                        <p class="font-Montserrat text-4xl text-gray-300">{{ mb_strtoupper(__("some of the projects i've worked on")) }}</p>
+                <section id="projects" class="w-full flex flex-col gap-10 justify-center mt-80 mb-60 lg:pl-[20%] lg:pr-[10%] z-10" data-isShown="false">
+                    <div class="section-title transition-all duration-300 opacity-0 pl-[5%] lg:pl-0">
+                        <p class="font-Montserrat text-[2rem] text-gray-300 lg:text-4xl">{{ mb_strtoupper(__("some of the projects i've worked on")) }}</p>
                     </div>
 
                     <div id="project-cards-container" class="w-full flex flex-col gap-10 transition-all duration-300">
@@ -132,8 +132,8 @@
                                     REMEMBER TO CHANGE data-projectCardNo VALUE FOR EACH NEW CARD. SHOULD BE NUMERATED IN CARDINAL ORDER
                             --}}
                         {{-- Card container --}}
-                        <div class="flex flex-col gap-3">
-                            <div class="project-card-container w-full flex flex-row justify-between opacity-0 transition-all duration-300" data-isActive="false" data-projectCardNo='1'>
+                        <div class="flex flex-col gap-0">
+                            {{-- <div class="project-card-container w-full flex flex-row justify-between opacity-0 transition-all duration-300" data-isActive="false" data-projectCardNo='1'>
                                 <div class="z-10 project-card w-full h-60 bg-Card hover:bg-CardHighlight rounded-3xl p-16 transition-all duration-300 cursor-pointer flex justify-start items-center" style="transition: width 500ms, background-color 300ms, color 300ms">
                                     <p class="text-center text-gray-300 text-5xl">CAHM Tienda de Muebles</p>
                                 </div>
@@ -141,65 +141,104 @@
                                 <a href="" target="_blank" class="z-0 close-card-button h-60 aspect-square bg-Card hover:bg-CardHighlight rounded-3xl p-16 transition-all duration-700 cursor-pointer flex justify-center items-center absolute opacity-0" style="transition: opacity 700ms, background-color 300ms">
                                     <i class="block h-20 aspect-square bg-no-repeat bg-cover" style="background-image: url('{{ asset('assets/images/icons/up-right-from-square-solid.svg') }}')"></i>
                                 </a>
-                            </div>
+                            </div> --}}
 
-                            <div id="project-showcase" class="project-showcase w-full h-0 opacity-0 transition-all duration-500 rounded-lg" style="background-image: url('{{ asset('assets/images/backgrounds/furniture_shop.png') }}')">
+                            {{-- <div id="project-showcase" class="project-showcase w-full h-0 opacity-0 transition-all duration-500 rounded-lg" style="background-image: url('{{ asset('assets/images/backgrounds/furniture_shop.png') }}')">
 
+                            </div> --}}
+
+                            <div class="project-card-container opacity-0 transition-all duration-300 cursor-pointer" data-isActive="false" data-projectCardNo='1'>
+                                <div class="project-card-clickable">
+                                    <div class="project-card-border w-full h-[1px] bg-gradient-to-l from-white transition-all duration-300"></div>
+                                    <div class="project-card-background w-full h-12 flex flex-row justify-end items-center bg-gradient-to-l from-Card py-10 px-5 transition-all duration-300 hover:bg-Card">
+                                        <p class="text-center text-gray-300 text-4xl">CAHM Tienda de Muebles</p>
+                                    </div>
+                                    <div class="project-card-border w-full h-[1px] bg-gradient-to-l from-white transition-all duration-300"></div>
+                                </div>
+
+                                <div class="project-card-showcase w-full h-0 opacity-0 transition-all duration-500 flex flex-row justify-end cursor-default" style="background-image: url('{{ asset('assets/images/backgrounds/furniture_shop.png') }}')">
+                                    <div class="project-showcase-info transition-all duration-500 w-full h-full bg-gradient-to-l from-Card via-Card-50 via-50% flex flex-col items-start justify-around gap-10 pl-[70%] pr-[5%] py-10 text-white text-xl font-Roboto-Mono opacity-0">
+                                        <p>
+                                            <u>Tech Stack: </u>
+                                            <br>
+                                            Laravel, Vanilla JS, LESS, GIT
+                                        </p>
+
+                                        <p>
+                                            <u>Description: </u>
+                                            <br>
+                                            E-commerce website project I participated in, along three other colleagues as a lead developer. I took care of design and development of both front-end and back-end features, along with project planning and team management. 
+                                        </p>
+
+                                        <p>
+                                            <u>Relevant Links></u>
+                                            <br>
+                                            <a href="https://github.com/Carlos-GLOZ/furniture-shop" class="flex flex-row gap-2 items-center hover:underline">
+                                                GitHub page 
+                                                <i class="block h-5 aspect-square bg-no-repeat bg-cover invert" style="background-image: url('{{ asset('assets/images/icons/up-right-from-square-solid.svg') }}')"></i>
+                                            </a>
+                                            <a href="" class="flex flex-row gap-2 items-center hover:underline">
+                                                Website 
+                                                <i class="block h-5 aspect-square bg-no-repeat bg-cover invert" style="background-image: url('{{ asset('assets/images/icons/up-right-from-square-solid.svg') }}')"></i>
+                                            </a>
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
                 {{-- Skills --}}
-                <section id="skills" class="w-full flex justify-center pl-[5%] pr-[5%] mt-96 mb-60 lg:pl-[19%] lg:pr-[10%]" data-isShown="false">
+                <section id="skills" class="w-full flex justify-center mt-96 mb-60 lg:pl-[19%] lg:pr-[10%]" data-isShown="false">
                     <div class="w-full flex flex-col gap-10">
-                        <div class="section-title transition-all duration-300 opacity-0">
+                        <div class="section-title transition-all duration-300 opacity-0 pl-[5%] lg:pl-0">
                             <p class="font-Montserrat text-4xl text-gray-300">{{ mb_strtoupper(__("the tools i've used")) }}</p>
                         </div>
 
-                        <div class="flex flex-wrap gap-14 justify-center">
+                        <div class="flex flex-wrap gap-[1px] justify-center">
                             
-                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 rounded-3xl hover:bg-CardHighlight transition-all duration-300 opacity-0 lg:w-72 lg:p-16">
+                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 border-2 border-opacity-0 border-white hover:border-opacity-100 hover:bg-CardHighlight transition-all duration-300 opacity-0 lg:w-72 lg:p-16">
                                 <img src="{{ asset('assets/images/icons/python_logo.png') }}" alt="" class="w-20">
                                 <p class="text-center text-gray-300 text-2xl font-semibold transition-all duration-300">Python</p>
                             </div>
                             
-                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 rounded-3xl hover:bg-CardHighlight transition-all duration-300 opacity-0 lg:w-72 lg:p-16">
+                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 hover:bg-CardHighlight transition-all duration-300 opacity-0 lg:w-72 lg:p-16">
                                 <img src="{{ asset('assets/images/icons/html_css_logo.png') }}" alt="" class="w-40">
                                 <p class="text-center text-gray-300 text-2xl font-semibold transition-all duration-300">Html & CSS</p>
                             </div>
                             
-                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 rounded-3xl hover:bg-CardHighlight transition-all duration-300 opacity-0 lg:w-72 lg:p-16">
+                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 hover:bg-CardHighlight transition-all duration-300 opacity-0 lg:w-72 lg:p-16">
                                 <img src="{{ asset('assets/images/icons/php_logo.png') }}" alt="" class="w-28">
                                 <p class="text-center text-gray-300 text-2xl font-semibold transition-all duration-300">PHP</p>
                             </div>
                             
-                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 rounded-3xl hover:bg-CardHighlight transition-all duration-300 opacity-0 lg:w-72 lg:p-16">
+                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 hover:bg-CardHighlight transition-all duration-300 opacity-0 lg:w-72 lg:p-16">
                                 <img src="{{ asset('assets/images/icons/git_logo.png') }}" alt="" class="w-20">
                                 <p class="text-center text-gray-300 text-2xl font-semibold transition-all duration-300">GIT</p>
                             </div>
                             
-                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 rounded-3xl hover:bg-CardHighlight transition-all duration-300 opacity-0 lg:w-72 lg:p-16">
+                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 hover:bg-CardHighlight transition-all duration-300 opacity-0 lg:w-72 lg:p-16">
                                 <img src="{{ asset('assets/images/icons/js_logo.png') }}" alt="" class="w-20">
                                 <p class="text-center text-gray-300 text-2xl font-semibold transition-all duration-300">JavaScript</p>
                             </div>
                             
-                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 rounded-3xl hover:bg-CardHighlight transition-all duration-300 opacity-0 lg:w-72 lg:p-16">
+                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 hover:bg-CardHighlight transition-all duration-300 opacity-0 lg:w-72 lg:p-16">
                                 <img src="{{ asset('assets/images/icons/laravel_logo.png') }}" alt="" class="w-20">
                                 <p class="text-center text-gray-300 text-2xl font-semibold transition-all duration-300">Laravel</p>
                             </div>
                             
-                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 rounded-3xl hover:bg-CardHighlight transition-all duration-300 opacity-0 lg:w-72 lg:p-16">
+                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 hover:bg-CardHighlight transition-all duration-300 opacity-0 lg:w-72 lg:p-16">
                                 <img src="{{ asset('assets/images/icons/django_logo.png') }}" alt="" class="">
                                 <p class="text-center text-gray-300 text-2xl font-semibold" transition-all duration-300>Django</p>
                             </div>
                             
-                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 rounded-3xl hover:bg-CardHighlight transition-all duration-300 opacity-0 lg:w-72 lg:p-16">
+                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 hover:bg-CardHighlight transition-all duration-300 opacity-0 lg:w-72 lg:p-16">
                                 <img src="{{ asset('assets/images/icons/flutter_logo.png') }}" alt="" class="w-20">
                                 <p class="text-center text-gray-300 text-2xl font-semibold transition-all duration-300">Flutter</p>
                             </div>
                             
-                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 rounded-3xl hover:bg-CardHighlight transition-all duration-300 opacity-0 lg:w-72 lg:p-16">
+                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 hover:bg-CardHighlight transition-all duration-300 opacity-0 lg:w-72 lg:p-16">
                                 <img src="{{ asset('assets/images/icons/mysql_logo.png') }}" alt="" class="">
                                 <p class="text-center text-gray-300 text-2xl font-semibold transition-all duration-300">MySQL</p>
                             </div>

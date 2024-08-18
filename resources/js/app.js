@@ -167,7 +167,11 @@ const projectCardContainers = projects.getElementsByClassName('project-card-cont
 const cards = skills.getElementsByClassName('card');
 const contactStaggerItems = contact.getElementsByClassName('contact-stagger-item');
 
-const projectShowcase = document.getElementById('project-showcase');
+const projectsStaggerDelay = 150; // The delay between projects appearing one after the other
+const skillsStaggerDelay = 100; // The delay between skills appearing one after the other
+const contactsStaggerDelay = 200; // The delay between contacts appearing one after the other
+
+// const projectShowcase = document.getElementById('project-showcase');
 
 function isScrolledIntoView(elem, offset = 0)
 {
@@ -189,7 +193,7 @@ function toggleSkills(show = true) {
             
             setTimeout((e) => {
                 card.style.opacity = '1';
-            }, 100 * i);
+            }, skillsStaggerDelay * i);
         }
 
         skills.dataset.isshown = 'true'
@@ -213,11 +217,11 @@ function toggleProjects(show = true) {
             
             setTimeout((e) => {
                 projectCardContainer.style.opacity = '1';
-            }, 200 * i);
+            }, projectsStaggerDelay * i);
             
         }
 
-        projectShowcase.style.opacity = '1';
+        // projectShowcase.style.opacity = '1';
 
         projects.dataset.isshown = 'true'
     } else if (!show && projects.dataset.isshown == 'true') { // Hide projects section
@@ -230,7 +234,7 @@ function toggleProjects(show = true) {
             
         }
 
-        projectShowcase.style.opacity = '0';
+        // projectShowcase.style.opacity = '0';
 
         projects.dataset.isshown = 'false'
     }
@@ -246,7 +250,7 @@ function toggleContact(show = true) {
             
             setTimeout((e) => {
                 contactStaggerItem.style.opacity = '1';
-            }, 200 * i);
+            }, contactsStaggerDelay * i);
             
         }
 
