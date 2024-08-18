@@ -6,9 +6,15 @@ export default {
     "./resources/**/*.css",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'Card': '#393E46',
+        'Card-50': 'rgba(57, 62, 70, 0.50)'
+      }
+    },
     fontFamily: {
-      'Montserrat': ['Montserrat', 'sans-serif']
+      'Montserrat': ['Montserrat', 'sans-serif'],
+      'Roboto-Mono': ['Roboto mono', 'monospace']
     },
     // backgroundColor: {
     //   // 'Default': '#1d1d20',
