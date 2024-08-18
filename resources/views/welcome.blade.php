@@ -204,42 +204,50 @@
                                 <p class="text-center text-gray-300 text-2xl font-semibold transition-all duration-300">Python</p>
                             </div>
                             
-                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 hover:bg-CardHighlight transition-all duration-300 opacity-0 lg:w-72 lg:p-16">
+                            
+                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 border-2 border-opacity-0 border-white hover:border-opacity-100 hover:bg-CardHighlight transition-all duration-300 opacity-0 lg:w-72 lg:p-16">
                                 <img src="{{ asset('assets/images/icons/html_css_logo.png') }}" alt="" class="w-40">
                                 <p class="text-center text-gray-300 text-2xl font-semibold transition-all duration-300">Html & CSS</p>
                             </div>
                             
-                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 hover:bg-CardHighlight transition-all duration-300 opacity-0 lg:w-72 lg:p-16">
+                            
+                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 border-2 border-opacity-0 border-white hover:border-opacity-100 hover:bg-CardHighlight transition-all duration-300 opacity-0 lg:w-72 lg:p-16">
                                 <img src="{{ asset('assets/images/icons/php_logo.png') }}" alt="" class="w-28">
                                 <p class="text-center text-gray-300 text-2xl font-semibold transition-all duration-300">PHP</p>
                             </div>
                             
-                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 hover:bg-CardHighlight transition-all duration-300 opacity-0 lg:w-72 lg:p-16">
+                            
+                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 border-2 border-opacity-0 border-white hover:border-opacity-100 hover:bg-CardHighlight transition-all duration-300 opacity-0 lg:w-72 lg:p-16">
                                 <img src="{{ asset('assets/images/icons/git_logo.png') }}" alt="" class="w-20">
                                 <p class="text-center text-gray-300 text-2xl font-semibold transition-all duration-300">GIT</p>
                             </div>
                             
-                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 hover:bg-CardHighlight transition-all duration-300 opacity-0 lg:w-72 lg:p-16">
+                            
+                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 border-2 border-opacity-0 border-white hover:border-opacity-100 hover:bg-CardHighlight transition-all duration-300 opacity-0 lg:w-72 lg:p-16">
                                 <img src="{{ asset('assets/images/icons/js_logo.png') }}" alt="" class="w-20">
                                 <p class="text-center text-gray-300 text-2xl font-semibold transition-all duration-300">JavaScript</p>
                             </div>
                             
-                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 hover:bg-CardHighlight transition-all duration-300 opacity-0 lg:w-72 lg:p-16">
+                            
+                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 border-2 border-opacity-0 border-white hover:border-opacity-100 hover:bg-CardHighlight transition-all duration-300 opacity-0 lg:w-72 lg:p-16">
                                 <img src="{{ asset('assets/images/icons/laravel_logo.png') }}" alt="" class="w-20">
                                 <p class="text-center text-gray-300 text-2xl font-semibold transition-all duration-300">Laravel</p>
                             </div>
                             
-                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 hover:bg-CardHighlight transition-all duration-300 opacity-0 lg:w-72 lg:p-16">
+                            
+                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 border-2 border-opacity-0 border-white hover:border-opacity-100 hover:bg-CardHighlight transition-all duration-300 opacity-0 lg:w-72 lg:p-16">
                                 <img src="{{ asset('assets/images/icons/django_logo.png') }}" alt="" class="">
                                 <p class="text-center text-gray-300 text-2xl font-semibold" transition-all duration-300>Django</p>
                             </div>
                             
-                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 hover:bg-CardHighlight transition-all duration-300 opacity-0 lg:w-72 lg:p-16">
+                            
+                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 border-2 border-opacity-0 border-white hover:border-opacity-100 hover:bg-CardHighlight transition-all duration-300 opacity-0 lg:w-72 lg:p-16">
                                 <img src="{{ asset('assets/images/icons/flutter_logo.png') }}" alt="" class="w-20">
                                 <p class="text-center text-gray-300 text-2xl font-semibold transition-all duration-300">Flutter</p>
                             </div>
                             
-                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 hover:bg-CardHighlight transition-all duration-300 opacity-0 lg:w-72 lg:p-16">
+                            
+                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 border-2 border-opacity-0 border-white hover:border-opacity-100 hover:bg-CardHighlight transition-all duration-300 opacity-0 lg:w-72 lg:p-16">
                                 <img src="{{ asset('assets/images/icons/mysql_logo.png') }}" alt="" class="">
                                 <p class="text-center text-gray-300 text-2xl font-semibold transition-all duration-300">MySQL</p>
                             </div>
