@@ -4,8 +4,10 @@ function toggleCard(toggleOn, projectCard, projectShowcase, projectInfo) {
     const cardTransitionDuration = parseFloat(getComputedStyle(projectCard).transitionDuration) * 1000; // transition duration set to card in ms
     const infoTransitionDuration = parseFloat(getComputedStyle(projectInfo).transitionDuration) * 1000; // transition duration set to project info in ms
 
+    const projectShowcaseTargetHeight = getComputedStyle(projectShowcase).maxHeight;
+
     if (toggleOn) {
-        projectShowcase.style.height = '760px';
+        projectShowcase.style.height = projectShowcaseTargetHeight;
         projectShowcase.style.opacity = '1';
 
         setTimeout((e) => {
