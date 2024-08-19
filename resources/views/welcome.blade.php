@@ -133,19 +133,6 @@
                             --}}
                         {{-- Card container --}}
                         <div class="flex flex-col gap-0">
-                            {{-- <div class="project-card-container w-full flex flex-row justify-between opacity-0 transition-all duration-300" data-isActive="false" data-projectCardNo='1'>
-                                <div class="z-10 project-card w-full h-60 bg-Card hover:bg-CardHighlight rounded-3xl p-16 transition-all duration-300 cursor-pointer flex justify-start items-center" style="transition: width 500ms, background-color 300ms, color 300ms">
-                                    <p class="text-center text-gray-300 text-5xl">CAHM Tienda de Muebles</p>
-                                </div>
-    
-                                <a href="" target="_blank" class="z-0 close-card-button h-60 aspect-square bg-Card hover:bg-CardHighlight rounded-3xl p-16 transition-all duration-700 cursor-pointer flex justify-center items-center absolute opacity-0" style="transition: opacity 700ms, background-color 300ms">
-                                    <i class="block h-20 aspect-square bg-no-repeat bg-cover" style="background-image: url('{{ asset('assets/images/icons/up-right-from-square-solid.svg') }}')"></i>
-                                </a>
-                            </div> --}}
-
-                            {{-- <div id="project-showcase" class="project-showcase w-full h-0 opacity-0 transition-all duration-500 rounded-lg" style="background-image: url('{{ asset('assets/images/backgrounds/furniture_shop.png') }}')">
-
-                            </div> --}}
 
                             <div class="project-card-container opacity-0 transition-all duration-1000 cursor-pointer" data-isActive="false" data-projectCardNo='1'>
                                 <div class="project-card-clickable">
