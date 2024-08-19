@@ -126,8 +126,10 @@
 
                     <div id="project-cards-container" class="w-full flex flex-col gap-10 transition-all duration-300">
                         {{-- 
-                                    REMEMBER TO CHANGE data-projectCardNo VALUE FOR EACH NEW CARD. SHOULD BE NUMERATED IN CARDINAL ORDER
-                            --}}
+                            REMEMBER TO CHANGE data-projectCardNo VALUE FOR EACH NEW CARD. SHOULD BE NUMERATED IN CARDINAL ORDER
+
+                            ALSO CHANGE GRADIENT DIRECTIONS FOR BACKGROUND AND BORDERS
+                        --}}
                         {{-- Card container --}}
                         <div class="flex flex-col gap-0">
 
