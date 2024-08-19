@@ -55,7 +55,7 @@
                         <img src="{{ asset('assets/images/icons/'.$locale.'_flag.png') }}" alt="{{ $locale }}" class="w-5 object-contain"> 
                     </p>
     
-                    <div id="language-selector-list" class="hidden mt-2" data-hidden="true">
+                    <div id="language-selector-list" class="hidden mt-2 bg-Card fixed lg:relative lg:bg-Default" data-hidden="true">
                         @foreach ($supported_locales as $sup_locale)
                             @if ($sup_locale != $locale)
                                 <p class="language-selector-option bg-[transparent] text-gray-300 w-16 h-8s border-b-2 border-transparent hover:border-gray-300 flex flex-row justify-around cursor-pointer" data-lang="{{ $sup_locale }}">
