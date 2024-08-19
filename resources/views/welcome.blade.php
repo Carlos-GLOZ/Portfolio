@@ -30,11 +30,9 @@
     <body class="antialiased">
         <div id="main-container" class="w-full bg-Default min-h-screen">
             {{-- Page background --}}
-            <div class="page-background fixed w-full h-full flex justify-center items-center -z-10">
-                {{-- <svg id="background-circle" height="100" width="100" class="absolute">
-                    <circle r="45" fill="transparent" stroke="white" stroke-width="3" cx="50" cy="50" />
-                </svg> --}}
-            </div>
+            {{-- <div class="page-background fixed w-full h-full flex justify-center items-center">
+                <div id="background-circle" class="w-full aspect-square absolute z-[-1] bg-gradient-to-t from-white" style="background: radial-gradient(closest-side, rgba(255, 255, 255, 0.39), transparent)"></div>
+            </div> --}}
 
             {{-- Language picker & Responsive menu button --}}
             <div class="w-full fixed top-0 flex py-8 justify-around bg-Card z-20 lg:bg-opacity-0 lg:absolute">
@@ -136,7 +134,7 @@
                             <div class="project-card-container opacity-0 transition-all duration-700 cursor-pointer" data-isActive="false" data-projectCardNo='1'>
                                 <div class="project-card-clickable">
                                     <div class="project-card-border w-full h-[1px] bg-gradient-to-l from-white transition-all duration-300"></div>
-                                    <div class="project-card-background w-full h-12 flex flex-row justify-end items-center py-10 px-5 transition-all duration-300 bg-Card-50 lg:bg-gradient-to-l lg:from-Card hover:bg-Card">
+                                    <div class="project-card-background w-full h-12 flex flex-row justify-end items-center py-12 px-2 lg:py-10 lg:px-5 transition-all duration-300 bg-Card-50 lg:bg-gradient-to-l lg:from-Card hover:bg-Card">
                                         <p class="text-center text-gray-300 text-4xl">CAHM Tienda de Muebles</p>
                                     </div>
                                     <div class="project-card-border w-full h-[1px] bg-gradient-to-l from-white transition-all duration-300"></div>
@@ -247,15 +245,15 @@
                         <p class="font-Montserrat text-4xl text-gray-300">{{ mb_strtoupper(__("get in touch with me")) }}</p>
                     </div>
                     <div class="w-full flex flex-wrap gap-[1px] justify-center">
-                        <a href="https://github.com/Carlos-GLOZ" target="_blank" class="contact-stagger-item contact-link h-48 opacity-0 flex flex-row items-center w-full pl-10 border-2 border-opacity-0 border-white cursor-pointer bg-Card hover:border-opacity-100 hover:bg-CardHighlight transition-all duration-300 2xl:w-[33%]">
+                        <a href="https://github.com/Carlos-GLOZ" target="_blank" class="contact-stagger-item contact-link h-48 opacity-0 flex flex-row items-center w-full pl-10 border-2 border-opacity-0 border-white cursor-pointer bg-Card hover:border-opacity-100 z-10 hover:bg-CardHighlight transition-all duration-300 2xl:w-[33%]">
                             <img src="{{ asset('assets/images/icons/github_logo.png') }}" alt="" class="h-2/3">
                             <p class="link-title text-5xl text-gray-300 transition-all duration-300 w-full text-center">GitHub</p>
                         </a>
-                        <a href="https://www.linkedin.com/in/carlos-giraldo-lozano-319a36225/" target="_blank" class="contact-stagger-item contact-link h-48 opacity-0 flex flex-row items-center w-full pl-10 border-2 border-opacity-0 border-white cursor-pointer bg-Card hover:border-opacity-100 hover:bg-CardHighlight transition-all duration-300 2xl:w-[33%]">
+                        <a href="https://www.linkedin.com/in/carlos-giraldo-lozano-319a36225/" target="_blank" class="contact-stagger-item contact-link h-48 opacity-0 flex flex-row items-center w-full pl-10 border-2 border-opacity-0 border-white cursor-pointer bg-Card hover:border-opacity-100 z-10 hover:bg-CardHighlight transition-all duration-300 2xl:w-[33%]">
                             <img src="{{ asset('assets/images/icons/linkedin_logo.png') }}" alt="" class="h-2/3">
                             <p class="link-title text-5xl text-gray-300 transition-all duration-300 w-full text-center">LinkedIn</p>
                         </a>
-                        <a href="mailto:cgiraldolozano@gmail.com" target="_blank" class="contact-stagger-item contact-link h-48 opacity-0 flex flex-row items-center w-full pl-10 border-2 border-opacity-0 border-white cursor-pointer bg-Card hover:border-opacity-100 hover:bg-CardHighlight transition-all duration-300 2xl:w-[33%]">
+                        <a href="mailto:cgiraldolozano@gmail.com" target="_blank" class="contact-stagger-item contact-link h-48 opacity-0 flex flex-row items-center w-full pl-10 border-2 border-opacity-0 border-white cursor-pointer bg-Card hover:border-opacity-100 z-10 hover:bg-CardHighlight transition-all duration-300 2xl:w-[33%]">
                             <img src="{{ asset('assets/images/icons/email_logo.png') }}" alt="" class="h-2/3">
                             <p class="link-title text-5xl text-gray-300 transition-all duration-300 w-full text-center">Email</p>
                         </a>
