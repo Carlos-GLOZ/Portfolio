@@ -159,26 +159,26 @@
                                 <div class="project-card-showcase w-full h-0 opacity-0 transition-all duration-1000 flex flex-row justify-end cursor-default max-h-[760px]" style="background-image: url('{{ asset('assets/images/backgrounds/furniture_shop.png') }}')">
                                     <div class="project-showcase-info transition-all duration-700 w-full h-full bg-Card-75 flex flex-col items-start justify-around gap-10 pl-[5%] pr-[5%] py-10 text-white text-xl font-Roboto-Mono opacity-0 lg:pl-[70%] lg:bg-gradient-to-l lg:from-Card lg:via-Card-50 lg:via-50%">
                                         <p>
-                                            <u>Tech Stack: </u>
+                                            <u>{{ ucwords(__('tech stack')) }}: </u>
                                             <br>
-                                            Laravel, Vanilla JS, LESS, GIT
+                                            Laravel, Vanilla JS, LESS, GIT.
                                         </p>
 
                                         <p>
-                                            <u>Description: </u>
+                                            <u>{{ ucwords(__('description')) }}: </u>
                                             <br>
-                                            E-commerce website project I participated in, along three other colleagues as a lead developer. I took care of design and development of both front-end and back-end features, along with project planning and team management. 
+                                            {{ ucfirst(__('e-commerce website project I participated in, along three other colleagues as a lead developer')) }}. {{ ucfirst(__('i took care of design and development of both front-end and back-end features, as well as project planning and team management')) }}
                                         </p>
 
                                         <div class="w-full flex flex-col gap-2">
-                                            <u>Relevant Links:</u>
+                                            <u>{{ ucwords(__('relevant links')) }}:</u>
                                             <div class="w-full flex flex-col gap-2">
                                                 <a href="https://github.com/Carlos-GLOZ/furniture-shop" class="flex flex-row gap-2 w-full items-center hover:underline bg-Card-75 p-4 border-y-[1px] border-white">
-                                                    GitHub page 
+                                                    {{ ucfirst(__('Github page')) }}
                                                     <i class="block h-5 aspect-square bg-no-repeat bg-cover invert" style="background-image: url('{{ asset('assets/images/icons/up-right-from-square-solid.svg') }}')"></i>
                                                 </a>
                                                 <a href="" class="flex flex-row gap-2 w-full items-center hover:underline bg-Card-75 p-4 border-y-[1px] border-whitee">
-                                                    Website 
+                                                    {{ ucfirst(__('website')) }} 
                                                     <i class="block h-5 aspect-square bg-no-repeat bg-cover invert" style="background-image: url('{{ asset('assets/images/icons/up-right-from-square-solid.svg') }}')"></i>
                                                 </a>
                                             </div>
