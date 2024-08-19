@@ -199,55 +199,55 @@
 
                         <div class="flex flex-wrap gap-[1px] justify-center">
                             
-                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 border-2 border-opacity-0 border-white hover:border-opacity-100 hover:bg-CardHighlight transition-all duration-300 opacity-0 lg:w-72 lg:p-16">
+                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 border-2 border-opacity-0 border-white hover:border-opacity-100 hover:bg-CardHighlight transition-all duration-300 opacity-0 z-10 lg:w-72 lg:p-16">
                                 <img src="{{ asset('assets/images/icons/python_logo.png') }}" alt="" class="w-20">
                                 <p class="text-center text-gray-300 text-2xl font-semibold transition-all duration-300">Python</p>
                             </div>
                             
                             
-                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 border-2 border-opacity-0 border-white hover:border-opacity-100 hover:bg-CardHighlight transition-all duration-300 opacity-0 lg:w-72 lg:p-16">
+                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 border-2 border-opacity-0 border-white hover:border-opacity-100 hover:bg-CardHighlight transition-all duration-300 opacity-0 z-10 lg:w-72 lg:p-16">
                                 <img src="{{ asset('assets/images/icons/html_css_logo.png') }}" alt="" class="w-40">
                                 <p class="text-center text-gray-300 text-2xl font-semibold transition-all duration-300">Html & CSS</p>
                             </div>
                             
                             
-                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 border-2 border-opacity-0 border-white hover:border-opacity-100 hover:bg-CardHighlight transition-all duration-300 opacity-0 lg:w-72 lg:p-16">
+                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 border-2 border-opacity-0 border-white hover:border-opacity-100 hover:bg-CardHighlight transition-all duration-300 opacity-0 z-10 lg:w-72 lg:p-16">
                                 <img src="{{ asset('assets/images/icons/php_logo.png') }}" alt="" class="w-28">
                                 <p class="text-center text-gray-300 text-2xl font-semibold transition-all duration-300">PHP</p>
                             </div>
                             
                             
-                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 border-2 border-opacity-0 border-white hover:border-opacity-100 hover:bg-CardHighlight transition-all duration-300 opacity-0 lg:w-72 lg:p-16">
+                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 border-2 border-opacity-0 border-white hover:border-opacity-100 hover:bg-CardHighlight transition-all duration-300 opacity-0 z-10 lg:w-72 lg:p-16">
                                 <img src="{{ asset('assets/images/icons/git_logo.png') }}" alt="" class="w-20">
                                 <p class="text-center text-gray-300 text-2xl font-semibold transition-all duration-300">GIT</p>
                             </div>
                             
                             
-                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 border-2 border-opacity-0 border-white hover:border-opacity-100 hover:bg-CardHighlight transition-all duration-300 opacity-0 lg:w-72 lg:p-16">
+                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 border-2 border-opacity-0 border-white hover:border-opacity-100 hover:bg-CardHighlight transition-all duration-300 opacity-0 z-10 lg:w-72 lg:p-16">
                                 <img src="{{ asset('assets/images/icons/js_logo.png') }}" alt="" class="w-20">
                                 <p class="text-center text-gray-300 text-2xl font-semibold transition-all duration-300">JavaScript</p>
                             </div>
                             
                             
-                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 border-2 border-opacity-0 border-white hover:border-opacity-100 hover:bg-CardHighlight transition-all duration-300 opacity-0 lg:w-72 lg:p-16">
+                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 border-2 border-opacity-0 border-white hover:border-opacity-100 hover:bg-CardHighlight transition-all duration-300 opacity-0 z-10 lg:w-72 lg:p-16">
                                 <img src="{{ asset('assets/images/icons/laravel_logo.png') }}" alt="" class="w-20">
                                 <p class="text-center text-gray-300 text-2xl font-semibold transition-all duration-300">Laravel</p>
                             </div>
                             
                             
-                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 border-2 border-opacity-0 border-white hover:border-opacity-100 hover:bg-CardHighlight transition-all duration-300 opacity-0 lg:w-72 lg:p-16">
+                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 border-2 border-opacity-0 border-white hover:border-opacity-100 hover:bg-CardHighlight transition-all duration-300 opacity-0 z-10 lg:w-72 lg:p-16">
                                 <img src="{{ asset('assets/images/icons/django_logo.png') }}" alt="" class="">
                                 <p class="text-center text-gray-300 text-2xl font-semibold" transition-all duration-300>Django</p>
                             </div>
                             
                             
-                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 border-2 border-opacity-0 border-white hover:border-opacity-100 hover:bg-CardHighlight transition-all duration-300 opacity-0 lg:w-72 lg:p-16">
+                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 border-2 border-opacity-0 border-white hover:border-opacity-100 hover:bg-CardHighlight transition-all duration-300 opacity-0 z-10 lg:w-72 lg:p-16">
                                 <img src="{{ asset('assets/images/icons/flutter_logo.png') }}" alt="" class="w-20">
                                 <p class="text-center text-gray-300 text-2xl font-semibold transition-all duration-300">Flutter</p>
                             </div>
                             
                             
-                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 border-2 border-opacity-0 border-white hover:border-opacity-100 hover:bg-CardHighlight transition-all duration-300 opacity-0 lg:w-72 lg:p-16">
+                            <div class="card w-36 min-h-56 lg:min-h-0 bg-Card p-8 flex flex-col justify-around items-center gap-8 border-2 border-opacity-0 border-white hover:border-opacity-100 hover:bg-CardHighlight transition-all duration-300 opacity-0 z-10 lg:w-72 lg:p-16">
                                 <img src="{{ asset('assets/images/icons/mysql_logo.png') }}" alt="" class="">
                                 <p class="text-center text-gray-300 text-2xl font-semibold transition-all duration-300">MySQL</p>
                             </div>
@@ -256,30 +256,23 @@
                 </section>
 
                 {{-- Contact --}}
-                <section id="contact" class="w-full flex flex-col justify-center pl-[20%] pr-[10%] mt-96 mb-60 gap-6" data-isShown="false">
-                    <div class="section-title transition-all duration-300 opacity-0">
+                <section id="contact" class="w-full flex flex-col justify-center mt-96 mb-60 gap-6 lg:pl-[19%] lg:pr-[10%]" data-isShown="false">
+                    <div class="section-title transition-all duration-300 opacity-0 pl-[5%] lg:pl-0">
                         <p class="font-Montserrat text-4xl text-gray-300">{{ mb_strtoupper(__("get in touch with me")) }}</p>
                     </div>
-
-                    <div class="w-full h-48 flex flex-row gap-4 contact-links-container">
-                        <a href="https://github.com/Carlos-GLOZ" target="blank" class="contact-stagger-item opacity-0 contact-link flex flex-row items-center h-full w-1/3 pl-10 rounded-3xl bg-Card cursor-pointer z-10 transition-all duration-300 hover:bg-CardHighlight" data-contactIndex="1">
+                    <div class="w-full flex flex-wrap gap-[1px] justify-center">
+                        <a href="https://github.com/Carlos-GLOZ" target="blank" class="contact-stagger-item h-48 opacity-0 flex flex-row items-center w-full pl-10 border-2 border-opacity-0 border-white cursor-pointer bg-Card hover:border-opacity-100 hover:bg-CardHighlight transition-all duration-300 2xl:w-[33%]">
                             <img src="{{ asset('assets/images/icons/github_logo.png') }}" alt="" class="h-2/3">
                             <p class="link-title text-5xl text-gray-300 transition-all duration-300 w-full text-center">GitHub</p>
                         </a>
-                        
-                        <a href="https://www.linkedin.com/in/carlos-giraldo-lozano-319a36225/" target="blank" class="contact-stagger-item opacity-0 contact-link flex flex-row items-center h-full w-1/3 pl-10 rounded-3xl bg-Card cursor-pointer z-10 transition-all duration-300 hover:bg-CardHighlight" data-contactIndex="2">
+                        <a href="https://www.linkedin.com/in/carlos-giraldo-lozano-319a36225/" target="blank" class="contact-stagger-item h-48 opacity-0 flex flex-row items-center w-full pl-10 border-2 border-opacity-0 border-white cursor-pointer bg-Card hover:border-opacity-100 hover:bg-CardHighlight transition-all duration-300 2xl:w-[33%]">
                             <img src="{{ asset('assets/images/icons/linkedin_logo.png') }}" alt="" class="h-2/3">
                             <p class="link-title text-5xl text-gray-300 transition-all duration-300 w-full text-center">LinkedIn</p>
                         </a>
-                        
-                        <a href="mailto:cgiraldolozano@gmail.com" target="blank" class="contact-stagger-item opacity-0 contact-link flex flex-row items-center h-full w-1/3 pl-10 rounded-3xl bg-Card cursor-pointer z-10 transition-all duration-300 hover:bg-CardHighlight" data-contactIndex="0">
+                        <a href="mailto:cgiraldolozano@gmail.com" target="blank" class="contact-stagger-item h-48 opacity-0 flex flex-row items-center w-full pl-10 border-2 border-opacity-0 border-white cursor-pointer bg-Card hover:border-opacity-100 hover:bg-CardHighlight transition-all duration-300 2xl:w-[33%]">
                             <img src="{{ asset('assets/images/icons/email_logo.png') }}" alt="" class="h-2/3">
                             <p class="link-title text-5xl text-gray-300 transition-all duration-300 w-full text-center">Email</p>
                         </a>
-                    </div>
-                    <div id="contact-showcase" class="w-full h-[40rem] relative">
-                        <div class="contact-showcase-image contact-stagger-item opacity-0 w-full h-full absolute bg-cover bg-center transition-all duration-300" style="background-image: url('{{ asset('assets/images/backgrounds/github_page.png') }}')" data-contactIndex="1"></div>
-                        <div class="contact-showcase-image w-full h-full absolute bg-cover bg-center opacity-0 transition-all duration-300" style="background-image: url('{{ asset('assets/images/backgrounds/linkedin_page.png') }}')" data-contactIndex="2"></div>
                     </div>
                 </section>
 
