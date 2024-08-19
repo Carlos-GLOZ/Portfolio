@@ -30,9 +30,10 @@
     <body class="antialiased">
         <div id="main-container" class="w-full bg-Default min-h-screen">
             {{-- Page background --}}
-            {{-- <div class="page-background fixed w-full h-full flex justify-center items-center">
-                <div id="background-circle" class="w-full aspect-square absolute z-[-1] bg-gradient-to-t from-white" style="background: radial-gradient(closest-side, rgba(255, 255, 255, 0.39), transparent)"></div>
-            </div> --}}
+            <div id="page-background" class="fixed w-full h-full flex justify-center items-center transition-all duration-[5s]">
+                {{-- <div id="background-circle" class="w-full aspect-square absolute z-[-1] bg-gradient-to-t from-white" style="background: radial-gradient(closest-side, rgba(255, 255, 255, 0.39), transparent)"></div> --}}
+                <div id="background-circle" class="w-[960px] aspect-square absolute z-[-1] bg-white rounded-full opacity-[0.03] max-w-full"></div>
+            </div>
 
             {{-- Language picker & Responsive menu button --}}
             <div class="w-full fixed top-0 flex py-8 justify-around bg-Card z-20 lg:bg-opacity-0 lg:absolute">
@@ -68,7 +69,7 @@
 
             {{-- Banner --}}
             <div class="w-full flex justify-center">
-                <div class="w-[969px] h-[333px] mt-40 mb-16 border-r-4 border-l-4 border-gray-500 flex justify-center align-middle flex-col gap-11">
+                <div class="w-[969px] h-[333px] mt-[280px] mb-16 border-r-4 border-l-4 border-gray-500 flex justify-center align-middle flex-col gap-11">
                     <p class="text-8xl font-Montserrat text-gray-300 text-center">Carlos Giraldo</p>
                     <p class="text-2xl font-Montserrat text-gray-600 text-center">{{ ucfirst(__('fullstack web developer')) }}</p>
                 </div>
@@ -77,15 +78,15 @@
             {{-- Menu --}}
             <div id="menu" class="w-full hidden justify-center font-Montserrat text-4xl text-gray-300 py-16 sticky top-0 lg:flex">
                 {{-- Item --}}
-                <div id="menu-item-1" class="border-r-2 border-gray-300 px-8 py-2.5 cursor-pointer menu-item bg-Default z-20 transition-all ease-out duration-500">
+                <div id="menu-item-1" class="border-r-2 border-gray-300 px-8 py-2.5 cursor-pointer menu-item z-20 transition-all ease-in-out duration-1000">
                     <a href="#projects" class="highlightable transition-all ease-in-out duration-500">{{ mb_strtoupper(__('projects')) }}</a>
                 </div>
                 {{-- Item --}}
-                <div id="menu-item-2" class="border-r-2 border-gray-300 px-8 py-2.5 cursor-pointer menu-item bg-Default z-10 transition-all ease-out duration-500">
+                <div id="menu-item-2" class="border-r-2 border-gray-300 px-8 py-2.5 cursor-pointer menu-item z-[19] transition-all ease-in-out duration-1000">
                     <a href="#skills" class="highlightable transition-all ease-in-out duration-500">{{ mb_strtoupper(__('skills')) }}</a>
                 </div>
                 {{-- Item --}}
-                <div id="menu-item-3" class="px-8 py-2.5 cursor-pointer menu-item bg-Default z-0 transition-all ease-out duration-500">
+                <div id="menu-item-3" class="px-8 py-2.5 cursor-pointer menu-item z-[18] transition-all ease-in-out duration-1000">
                     <a href="#contact" class="highlightable transition-all ease-in-out duration-500">{{ mb_strtoupper(__('contact')) }}</a>
                 </div>
             </div>
@@ -134,7 +135,7 @@
                             <div class="project-card-container opacity-0 transition-all duration-700 cursor-pointer" data-isActive="false" data-projectCardNo='1'>
                                 <div class="project-card-clickable">
                                     <div class="project-card-border w-full h-[1px] bg-gradient-to-l from-white transition-all duration-300"></div>
-                                    <div class="project-card-background w-full h-12 flex flex-row justify-end items-center py-12 px-2 lg:py-10 lg:px-5 transition-all duration-300 bg-Card-50 lg:bg-gradient-to-l lg:from-Card hover:bg-Card">
+                                    <div class="project-card-background w-full h-12 flex flex-row justify-end items-center py-12 px-2 lg:py-10 lg:px-5 transition-all duration-300 bg-Card-50 lg:bg-gradient-to-l lg:from-Card hover:bg-CardHighlight">
                                         <p class="text-center text-gray-300 text-4xl">CAHM Tienda de Muebles</p>
                                     </div>
                                     <div class="project-card-border w-full h-[1px] bg-gradient-to-l from-white transition-all duration-300"></div>
@@ -240,7 +241,7 @@
                 </section>
 
                 {{-- Contact --}}
-                <section id="contact" class="w-full flex flex-col justify-center mt-96 mb-60 gap-6 lg:pl-[19%] lg:pr-[10%]" data-isShown="false">
+                <section id="contact" class="w-full flex flex-col justify-center mt-96 mb-96 gap-6 lg:pl-[19%] lg:pr-[10%]" data-isShown="false">
                     <div class="section-title transition-all duration-300 opacity-0 pl-[5%] lg:pl-0">
                         <p class="font-Montserrat text-4xl text-gray-300">{{ mb_strtoupper(__("get in touch with me")) }}</p>
                     </div>

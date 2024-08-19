@@ -34,7 +34,7 @@ function updateMenuPos() {
     for (let i = 0; i < menuItems.length; i++) {
         const item = menuItems[i];       
 
-        if (scrollY < 500) {
+        if (scrollY < 1) {
             const leftTransform = menuItemsInitialPos[item.id] * (scrollY / 500);
             item.style.transform = 'translate(-' + leftTransform + 'px)';
         } else {
