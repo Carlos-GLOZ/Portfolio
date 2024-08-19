@@ -25,7 +25,6 @@
         @vite(['resources/js/app.js'])
         @vite(['resources/js/language_selection.js'])
         @vite(['resources/js/projects_menu.js'])
-        @vite(['resources/js/contacts_menu.js'])
         @vite(['resources/js/background_effect.js'])
     </head>
     <body class="antialiased">
@@ -68,8 +67,6 @@
                     </div>
                 </div>
             </div>
-
-            
 
             {{-- Banner --}}
             <div class="w-full flex justify-center">
@@ -134,17 +131,17 @@
                         {{-- Card container --}}
                         <div class="flex flex-col gap-0">
 
-                            <div class="project-card-container opacity-0 transition-all duration-1000 cursor-pointer" data-isActive="false" data-projectCardNo='1'>
+                            <div class="project-card-container opacity-0 transition-all duration-700 cursor-pointer" data-isActive="false" data-projectCardNo='1'>
                                 <div class="project-card-clickable">
                                     <div class="project-card-border w-full h-[1px] bg-gradient-to-l from-white transition-all duration-300"></div>
-                                    <div class="project-card-background w-full h-12 flex flex-row justify-end items-center lg:bg-gradient-to-l lg:from-Card py-10 px-5 transition-all duration-300 hover:bg-Card">
+                                    <div class="project-card-background w-full h-12 flex flex-row justify-end items-center py-10 px-5 transition-all duration-300 bg-Card-50 lg:bg-gradient-to-l lg:from-Card hover:bg-Card">
                                         <p class="text-center text-gray-300 text-4xl">CAHM Tienda de Muebles</p>
                                     </div>
                                     <div class="project-card-border w-full h-[1px] bg-gradient-to-l from-white transition-all duration-300"></div>
                                 </div>
 
                                 <div class="project-card-showcase w-full h-0 opacity-0 transition-all duration-1000 flex flex-row justify-end cursor-default max-h-[760px]" style="background-image: url('{{ asset('assets/images/backgrounds/furniture_shop.png') }}')">
-                                    <div class="project-showcase-info transition-all duration-700 w-full h-full bg-Card-75 flex flex-col items-start justify-around gap-10 pl-[5%] pr-[5%] py-10 text-white text-xl font-Roboto-Mono opacity-0 lg:pl-[70%] lg:bg-gradient-to-l lg:from-Card lg:via-Card-50 lg:via-50%">
+                                    <div class="project-showcase-info transition-all duration-700 w-full h-full bg-Card-75 hidden flex-col items-start justify-around gap-10 pl-[5%] pr-[5%] py-10 text-white text-xl font-Roboto-Mono opacity-0 lg:pl-[70%] lg:bg-gradient-to-l lg:from-Card lg:via-Card-50 lg:via-50%">
                                         <p>
                                             <u>{{ ucwords(__('tech stack')) }}: </u>
                                             <br>

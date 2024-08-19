@@ -9,6 +9,8 @@ function toggleCard(toggleOn, projectCard, projectShowcase, projectInfo) {
     if (toggleOn) {
         projectShowcase.style.height = projectShowcaseTargetHeight;
         projectShowcase.style.opacity = '1';
+        
+        projectInfo.style.display = 'flex';
 
         setTimeout((e) => {
             projectInfo.style.opacity = '1';
@@ -16,8 +18,10 @@ function toggleCard(toggleOn, projectCard, projectShowcase, projectInfo) {
 
     } else {
         projectInfo.style.opacity = '0';
-
+        
+        
         setTimeout((e) => {
+            projectInfo.style.display = 'none';
             projectShowcase.style.opacity = '0';
             projectShowcase.style.height = '0px';
         }, infoTransitionDuration);
@@ -43,8 +47,9 @@ function disableAllProjectCards(except = ['0']) {
         }
 
         const projectShowcase = cardContainer.getElementsByClassName('project-card-showcase')[0];
+        const projectInfo = cardContainer.getElementsByClassName('project-showcase-info')[0];
 
-        toggleCard(false, cardContainer, projectShowcase)
+        toggleCard(false, cardContainer, projectShowcase, projectInfo)
 
         cardContainer.dataset.isactive = 'false';
     }
