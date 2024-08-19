@@ -248,15 +248,15 @@
                         <p class="font-Montserrat text-4xl text-gray-300">{{ mb_strtoupper(__("get in touch with me")) }}</p>
                     </div>
                     <div class="w-full flex flex-wrap gap-[1px] justify-center">
-                        <a href="https://github.com/Carlos-GLOZ" target="blank" class="contact-stagger-item h-48 opacity-0 flex flex-row items-center w-full pl-10 border-2 border-opacity-0 border-white cursor-pointer bg-Card hover:border-opacity-100 hover:bg-CardHighlight transition-all duration-300 2xl:w-[33%]">
+                        <a href="https://github.com/Carlos-GLOZ" target="_blank" class="contact-stagger-item contact-link h-48 opacity-0 flex flex-row items-center w-full pl-10 border-2 border-opacity-0 border-white cursor-pointer bg-Card hover:border-opacity-100 hover:bg-CardHighlight transition-all duration-300 2xl:w-[33%]">
                             <img src="{{ asset('assets/images/icons/github_logo.png') }}" alt="" class="h-2/3">
                             <p class="link-title text-5xl text-gray-300 transition-all duration-300 w-full text-center">GitHub</p>
                         </a>
-                        <a href="https://www.linkedin.com/in/carlos-giraldo-lozano-319a36225/" target="blank" class="contact-stagger-item h-48 opacity-0 flex flex-row items-center w-full pl-10 border-2 border-opacity-0 border-white cursor-pointer bg-Card hover:border-opacity-100 hover:bg-CardHighlight transition-all duration-300 2xl:w-[33%]">
+                        <a href="https://www.linkedin.com/in/carlos-giraldo-lozano-319a36225/" target="_blank" class="contact-stagger-item contact-link h-48 opacity-0 flex flex-row items-center w-full pl-10 border-2 border-opacity-0 border-white cursor-pointer bg-Card hover:border-opacity-100 hover:bg-CardHighlight transition-all duration-300 2xl:w-[33%]">
                             <img src="{{ asset('assets/images/icons/linkedin_logo.png') }}" alt="" class="h-2/3">
                             <p class="link-title text-5xl text-gray-300 transition-all duration-300 w-full text-center">LinkedIn</p>
                         </a>
-                        <a href="mailto:cgiraldolozano@gmail.com" target="blank" class="contact-stagger-item h-48 opacity-0 flex flex-row items-center w-full pl-10 border-2 border-opacity-0 border-white cursor-pointer bg-Card hover:border-opacity-100 hover:bg-CardHighlight transition-all duration-300 2xl:w-[33%]">
+                        <a href="mailto:cgiraldolozano@gmail.com" target="_blank" class="contact-stagger-item contact-link h-48 opacity-0 flex flex-row items-center w-full pl-10 border-2 border-opacity-0 border-white cursor-pointer bg-Card hover:border-opacity-100 hover:bg-CardHighlight transition-all duration-300 2xl:w-[33%]">
                             <img src="{{ asset('assets/images/icons/email_logo.png') }}" alt="" class="h-2/3">
                             <p class="link-title text-5xl text-gray-300 transition-all duration-300 w-full text-center">Email</p>
                         </a>
