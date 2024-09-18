@@ -141,12 +141,12 @@
                                     <div class="project-card-border w-full h-[1px] bg-gradient-to-l from-white transition-all duration-300"></div>
                                 </div>
 
-                                <div class="project-card-showcase w-full h-0 opacity-0 transition-all duration-1000 flex flex-row justify-end cursor-default max-h-[760px]" style="background-image: url('{{ asset('assets/images/backgrounds/furniture_shop.png') }}')">
+                                <div class="project-card-showcase w-full h-0 opacity-0 transition-all duration-1000 flex flex-row justify-end cursor-default max-h-[734px] bg-no-repeat bg-auto sm:bg-[length:100%]" style="background-image: url('{{ asset('assets/images/backgrounds/furniture_shop.png') }}')">
                                     <div class="project-showcase-info transition-all duration-700 w-full h-full bg-Card-75 hidden flex-col items-start justify-around gap-10 pl-[5%] pr-[5%] py-10 text-white text-xl font-Roboto-Mono opacity-0 lg:pl-[70%] lg:bg-gradient-to-l lg:from-Card lg:via-Card-50 lg:via-50%">
                                         <p>
                                             <u>{{ ucwords(__('tech stack')) }}: </u>
                                             <br>
-                                            Laravel, Vanilla JS, LESS, GIT.
+                                            Laravel, Vanilla JS, LESS, Tailwind, GIT, Vite.
                                         </p>
 
                                         <p>
@@ -158,11 +158,51 @@
                                         <div class="w-full flex flex-col gap-2">
                                             <u>{{ ucwords(__('relevant links')) }}:</u>
                                             <div class="w-full flex flex-col gap-2">
-                                                <a href="https://github.com/Carlos-GLOZ/furniture-shop" class="flex flex-row gap-2 w-full items-center hover:underline bg-Card-75 p-4 border-y-[1px] border-white">
+                                                <a href="https://github.com/Carlos-GLOZ/furniture-shop" target="_blank" class="flex flex-row gap-2 w-full items-center hover:underline bg-Card-75 p-4 border-y-[1px] border-white">
                                                     {{ ucfirst(__('Github page')) }}
                                                     <i class="block h-5 aspect-square bg-no-repeat bg-cover invert" style="background-image: url('{{ asset('assets/images/icons/up-right-from-square-solid.svg') }}')"></i>
                                                 </a>
-                                                <a href="" class="flex flex-row gap-2 w-full items-center hover:underline bg-Card-75 p-4 border-y-[1px] border-whitee">
+                                                <a href="" target="_blank" class="flex flex-row gap-2 w-full items-center hover:underline bg-Card-75 p-4 border-y-[1px] border-whitee">
+                                                    {{ ucfirst(__('website')) }} 
+                                                    <i class="block h-5 aspect-square bg-no-repeat bg-cover invert" style="background-image: url('{{ asset('assets/images/icons/up-right-from-square-solid.svg') }}')"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-card-container opacity-0 transition-all duration-700 cursor-pointer" data-isActive="false" data-projectCardNo='2'>
+                                <div class="project-card-clickable">
+                                    <div class="project-card-border w-full h-[1px] bg-gradient-to-r from-white transition-all duration-300"></div>
+                                    <div class="project-card-background w-full h-12 flex flex-row justify-start items-center py-12 px-2 lg:py-10 lg:px-5 transition-all duration-300 bg-Card-50 lg:bg-gradient-to-r lg:from-Card hover:bg-CardHighlight">
+                                        <p class="text-center text-gray-300 text-4xl">Habitas Comuna</p>
+                                    </div>
+                                    <div class="project-card-border w-full h-[1px] bg-gradient-to-r from-white transition-all duration-300"></div>
+                                </div>
+
+                                <div class="project-card-showcase w-full h-0 opacity-0 transition-all duration-1000 flex flex-row justify-end cursor-default max-h-[734px] bg-no-repeat bg-auto sm:bg-[length:100%]" style="background-image: url('{{ asset('assets/images/backgrounds/habitas_comuna.png') }}')">
+                                    <div class="project-showcase-info transition-all duration-700 w-full h-full bg-Card-75 hidden flex-col items-start justify-around gap-10 pl-[5%] pr-[5%] py-10 text-white text-xl font-Roboto-Mono opacity-0 lg:pl-[70%] lg:bg-gradient-to-l lg:from-Card lg:via-Card-50 lg:via-50%">
+                                        <p>
+                                            <u>{{ ucwords(__('tech stack')) }}: </u>
+                                            <br>
+                                            Laravel, Vanilla JS, LESS, Tailwind, GIT, Vite, Axios.
+                                        </p>
+
+                                        <p>
+                                            <u>{{ ucwords(__('description')) }}: </u>
+                                            <br>
+                                            {{ ucfirst(__('e-commerce website project I participated in, along three other colleagues as a lead developer')) }}. {{ ucfirst(__('i took care of design and development of both front-end and back-end features, as well as project planning and team management')) }}
+                                        </p>
+
+                                        <div class="w-full flex flex-col gap-2">
+                                            <u>{{ ucwords(__('relevant links')) }}:</u>
+                                            <div class="w-full flex flex-col gap-2">
+                                                <a href="https://github.com/Carlos-GLOZ/habitas_comuna" target="_blank" class="flex flex-row gap-2 w-full items-center hover:underline bg-Card-75 p-4 border-y-[1px] border-white">
+                                                    {{ ucfirst(__('Github page')) }}
+                                                    <i class="block h-5 aspect-square bg-no-repeat bg-cover invert" style="background-image: url('{{ asset('assets/images/icons/up-right-from-square-solid.svg') }}')"></i>
+                                                </a>
+                                                <a href="" target="_blank" class="flex flex-row gap-2 w-full items-center hover:underline bg-Card-75 p-4 border-y-[1px] border-whitee">
                                                     {{ ucfirst(__('website')) }} 
                                                     <i class="block h-5 aspect-square bg-no-repeat bg-cover invert" style="background-image: url('{{ asset('assets/images/icons/up-right-from-square-solid.svg') }}')"></i>
                                                 </a>
