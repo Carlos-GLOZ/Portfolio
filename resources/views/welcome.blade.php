@@ -235,7 +235,7 @@
                                     @endif
 
                                     <div class="project-card-showcase w-full h-0 opacity-0 transition-all duration-1000 flex flex-row justify-end cursor-default max-h-[734px] bg-no-repeat bg-auto sm:bg-[length:100%]" style="background-image: url('{{ asset('assets/images/backgrounds/'.$project['name'].'.png') }}')">
-                                        <div class="project-showcase-info transition-all duration-700 w-full h-full bg-Card-75 hidden flex-col items-start justify-evenly pl-[5%] pr-[5%] text-white text-xl font-Roboto-Mono opacity-0 lg:pl-[70%] lg:bg-gradient-to-l lg:from-Card lg:via-Card-50 lg:via-50%">
+                                        <div class="project-showcase-info transition-all duration-700 w-full h-full bg-Card-75 hidden flex-col items-start justify-around pl-[5%] pr-[5%] text-white text-xl font-Roboto-Mono opacity-0 lg:pl-[70%] lg:bg-gradient-to-l lg:from-Card lg:via-Card-50 lg:via-50%" style="justify-content: space-evenly">
                                             <p>
                                                 <u>{{ ucwords(__('tech stack')) }}: </u>
                                                 <br>
