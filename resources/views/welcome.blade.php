@@ -25,7 +25,6 @@
         @vite(['resources/js/app.js'])
         @vite(['resources/js/language_selection.js'])
         @vite(['resources/js/projects_menu.js'])
-        @vite(['resources/js/background_effect.js'])
     </head>
     <body class="antialiased">
         <div id="main-container" class="w-full bg-Default min-h-screen">
