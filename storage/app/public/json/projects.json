@@ -1,0 +1,75 @@
+{
+    "projects": [
+        {
+            "id": "1",
+            "name": "furniture_shop",
+            "title": "CAHM Tienda de Muebles",
+            "tech_stack": [
+                "Laravel",
+                "Vanilla JS",
+                "LESS",
+                "Tailwind",
+                "GIT",
+                "Vite"
+            ],
+            "descriptions": {
+                "en": "E-commerce website project I participated in, along three other colleagues as a lead developer. I took care of design and development of both front-end and back-end features, as well as project planning and team management.",
+                "es": "Proyecto de web de e-commerce en el que participé, junto con tres otros compañeros como desarrollador principal. Me encargué del diseño y desarrollo de funcionalidades frontend y backend, además de planificación de proyecto y gestión de equipo."
+            },
+            "links": [
+                {
+                    "type": "github",
+                    "url": "https://github.com/Carlos-GLOZ/furniture-shop",
+                    "titles": {
+                        "en": "GitHub Page",
+                        "es": "Página de GitHub"
+                    }
+                },
+                {
+                    "type": "website",
+                    "url": "",
+                    "titles": {
+                        "en": "Webpage",
+                        "es": "Página web"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "name": "habitas_comuna",
+            "title": "Habitas Comuna",
+            "tech_stack": [
+                "Laravel",
+                "Vanilla JS",
+                "LESS",
+                "Tailwind",
+                "GIT",
+                "Vite",
+                "Axios"
+            ],
+            "descriptions": {
+                "en": "Homeowners association management application; developed as a final project for my two-year degree, I took part as a key figure in market research, design, planning, development, implementation to smartphone and deployment of the application.",
+                "es": "Aplicación de gestión de comunidades de vecinos; desarrollada como proyecto final de grado superior, participé como figura clave en el estudio de mercado, diseño, planificación, desarrollo, implementación a móvil y despliegue de la aplicación."
+            },
+            "links": [
+                {
+                    "type": "github",
+                    "url": "https://github.com/Carlos-GLOZ/habitas_comuna",
+                    "titles": {
+                        "en": "GitHub Page",
+                        "es": "Página de GitHub"
+                    }
+                },
+                {
+                    "type": "website",
+                    "url": "",
+                    "titles": {
+                        "en": "Webpage",
+                        "es": "Página web"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Support\Facades\App;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,17 +14,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/{locale?}', function (string $locale = null) {
-    $supported_locales = [
-        'en', 
-        'es',
-    ];
+// Route::get('/{locale?}', function (string $locale = null) {
+//     $supported_locales = [
+//         'en', 
+//         'es',
+//     ];
 
-    if (!in_array(strtolower($locale), $supported_locales)) {
-        $locale = 'es';
-    }
+//     if (!in_array(strtolower($locale), $supported_locales)) {
+//         $locale = 'es';
+//     }
     
-    App::setLocale($locale);
+//     App::setLocale($locale);
 
-    return view('welcome', ['locale' => $locale, 'supported_locales' => $supported_locales]);
-});
+//     return view('welcome', ['locale' => $locale, 'supported_locales' => $supported_locales]);
+// });
+
+Route::get('/{locale?}', [Controller::class, 'welcome']);
