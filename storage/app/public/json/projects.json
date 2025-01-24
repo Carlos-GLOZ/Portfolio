@@ -70,6 +70,38 @@
                     }
                 }
             ]
+        },
+        {
+            "id": "3",
+            "name": "repo_search",
+            "title": "GitHub Repository Search",
+            "tech_stack": [
+                "React",
+                "TypeScript",
+                "GIT"
+            ],
+            "descriptions": {
+                "en": "Small personal project; it makes use of GitHub's REST API to search for a given user and list all of their public repositories, while also providing a way to sort through them.",
+                "es": "Pequeño proyecto personal; utiliza la API REST de GitHub para buscar un usuario dado y listar todos sus repositorios públicos, ofreciendo también una manera de filtrar los resultados."
+            },
+            "links": [
+                {
+                    "type": "github",
+                    "url": "https://github.com/Carlos-GLOZ/repo_with_search",
+                    "titles": {
+                        "en": "GitHub Page",
+                        "es": "Página de GitHub"
+                    }
+                },
+                {
+                    "type": "website",
+                    "url": "https://reposearch.carlosgiraldolozano.com",
+                    "titles": {
+                        "en": "Webpage",
+                        "es": "Página web"
+                    }
+                }
+            ]
         }
     ]
 }
